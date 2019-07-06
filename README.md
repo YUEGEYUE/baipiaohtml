@@ -27,10 +27,14 @@ git config --global user.name "一个用户名"
 ----
  ## baipiaohtml目录结构
  ```
-    +bootstrap-3.3.7
+    +bootstrap-4.1.1-dist
         +css
-        +font
         +js
+
+    +DPlayer   第三方播放器插件
+
+    + font-awesome-4.7.0
+
     +css
 
     +js 
@@ -40,5 +44,6 @@ git config --global user.name "一个用户名"
 
     +loge    处理登录，注册，上传等操作的页面
         -login.html
+
     +index.html 主页面
 ```
