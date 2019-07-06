@@ -24,3 +24,21 @@ git config --global user.name "一个用户名"
         4. font awesome
         5. ajax
  
+----
+ ## baipiaohtml目录结构
+ ```
+    +bootstrap-3.3.7
+        +css
+        +font
+        +js
+    +css
+
+    +js 
+
+    +vid    主要存放处理视频的界面
+        -video.html
+
+    +loge    处理登录，注册，上传等操作的页面
+        -login.html
+    +index.html 主页面
+```
