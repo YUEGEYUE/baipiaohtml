@@ -14,6 +14,7 @@ git config --global user.name "一个用户名"
 2. 采用mvs模型设计
     1. 前端与后台分离
 3. 后台采用thinkphp5开发
+    1. [后台项目地址](https://github.com/YUEGEYUE/baipiaothinkphp)
 4. 前端
     1. 前端以html为主
     2. 主要的技术
