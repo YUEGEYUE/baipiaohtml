@@ -1,17 +1,38 @@
 // 林倍锋
 $(document).ready(function () {
-   
-    $("#upvid").change(function (e) { 
-        e.preventDefault();
-        alert($(this).val());
-        // $("#upvidname").text($(this).val());
+
+    $("#vidshow").hide();
+
+
+    $("#upvid").change(function () {
+        var files = this.files;
+        var file = files[0];
+        // alert(file.name);
+        var fh=$(this).val().split(".");
+        if(fh[fh.length-1]!="mp4"){
+            alert("请上传mp4文件");
+            return false;
+        }
+        $("#upvidname").text(file.name);
+
     });
-    $("#fmb").click(function (e) { 
-        e.preventDefault();
-        $("#fm").click();
-    });
-    $("#fm").change(function (e) { 
-        e.preventDefault();
-        $("#fmt").val($(this).val());
+    $("#videoPic").change(function () {
+        
+        var files = this.files;
+        var file = files[0];
+        var fh=$(this).val().split(".");
+        //这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件 
+        if (fh[fh.length-1]!="png") {
+            alert("请上传png图像");
+            return false;
+        }
+        $("#vidshow").fadeToggle("slow");
+        $("#upvidPicname").text($(this).val());
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+            var urlsrc = this.result;
+            $('#vpic').attr('src', urlsrc);
+        }
     });
 });
