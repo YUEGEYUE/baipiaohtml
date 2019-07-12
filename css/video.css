@@ -1,0 +1,118 @@
+@charset "utf-8";
+.head-contain {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 200px;
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menu .leader {
+    float: left;
+    width: 500px;
+    height: 50px;
+    margin: 0px 100px;
+}
+
+.menu .leader ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu .leader ul li {
+    float: left;
+}
+
+.menu .leader ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 13px 16px;
+    text-decoration: none;
+}
+
+.menu .leader ul li a:hover {
+    background-color: #93DEEC;
+}
+
+.menu .menu-right {
+    float: right;
+    height: 50px;
+    width: 300px;
+}
+
+.body {
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.body .body-view {
+    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 180px;
+    height: 100%;
+}
+
+.body .body-view .body-l {
+    position: absolute;
+    float: left;
+    width: 1117px;
+    height: 100%;
+    margin-left: 220px;
+    background-color: rgb(179, 228, 207);
+}
+
+.body .body-view .body-l .view-report {
+    height: 81px;
+    background-color: rgb(224, 175, 168);
+}
+
+.body .body-view .body-l .video-title {
+    height: 36px;
+    margin-bottom: 5px;
+}
+
+.body .body-view .body-l .video-title .title {
+    top: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.body .body-view .body-l .video-title .date {
+    top: 0px;
+    font-size: 20px;
+    text-align: center;
+}
+.body .body-view .body-l .video{
+    width: 100%;
+    height: 800px;
+}
+.body .body-view .body-r {
+    position: absolute;
+    float: left;
+    left:1357px;
+    width: 320px;
+    height: 100%;
+    background-color: rgb(88, 148, 158);
+}
+
+
+
+
+/* yuzhanhao */

@@ -1,38 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/video.css">
+    <link rel="stylesheet" href="../DPlayer-dist/DPlayer.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../DPlayer-dist/DPlayer.min.css">
-    <title>白漂网</title>
+    <title></title>
 </head>
 
 <body>
-    <div id="dplayer" style="width: 600px">
 
+    <div class="head-contain" style="background-image: url(../img/video_head.jpg);background-size: 100% 100%;">
+        <div class="menu">
+            <nav class="leader">
+                <ul>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 3</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-right">
+                <i class="icon"><img src="../img/video_head_icon.png" style="margin-top:5px;"></i>
+            </div>
+        </div>
     </div>
+    <div class="body">
+        <div class="body-view">
+            <div class="body-l">
+                <div class="view-report">
+                    <div class="video-title">
+                        <span class="title">title</span>
+                    </div>
+                    <div class="video-date">
+                        <span class="date">date</span>
+                    </div>
+                </div>
+                <div class="video">
+                    <div id="dplayer">
+                    </div>
+                </div>
+            </div>
+            <div class="body-r"></div>
+        </div>
+    </div>
+
+
+
+
 
 
 
     <script src="../DPlayer-dist/DPlayer.min.js"></script>
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../bootstrap-4.1.3-dist/js/bootstrap.js"></script>
+    <script src="../bootstrap-4.1.3-dist/css/bootstrap.min.css"></script>
     <script>
-        const dp = new DPlayer({
-            container: document.getElementById('dplayer'),
-            video: {
-                url: '../test_resources/1.mp4'
-            },
-            danmaku: {
-                id: 'testvideo2',
-                api: 'http://172.16.56.184:1207/',
-                
-            },
-        });
-
-    </script>
+            const dp = new DPlayer({
+                container: document.getElementById('dplayer'),
+                video: {
+                    url: '../test_resources/1.mp4'
+                },
+                // danmaku: {
+                //     id: 'testvideo2',
+                //     api: 'http://172.16.56.184:1207/',
+    
+                // },
+            });
+    
+        </script>
 </body>
 
 </html>
-<!-- 关浩延 -->
+
+
+<!-- yuzhanhao -->
