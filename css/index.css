@@ -1,0 +1,102 @@
+@charset "utf-8";
+body{
+	/*background-color:#000;*/
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+.bd{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:50px;
+	left:0px;
+	background:#fff;
+}
+.header{
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	height:48px;
+	background-color:#ee1c1b;
+}
+.header_logo{
+	width:200px;
+	text-align:center;
+	bottom:14px;
+	height:48px;
+	float:left;
+	
+}
+.header_logo img{
+		height:48px;
+	}
+
+.header_center{
+	width:300px;
+	margin: auto;
+	height: 0px;
+	margin-top: 7px;
+	
+}
+.header_right{
+
+	width:200px;
+	height:48px;
+	float:right;
+	padding:0px;
+
+}
+.header_right_icon{
+	border:2px solid white;
+	width:32px;
+	height:32px;
+	border-radius:32px;
+	background-image:url("../img/1.jpg");
+	background-size:32px 32px;
+	float:left;
+}
+.header_right_user{
+	width:120px;
+	line-height:32px;
+	text-align:center;
+	float:left;
+	font-family:"仿宋";
+	font-size:20px;
+	color:white;
+}
+img{width:100%;height:300px}
+.content{
+	position:absolute;
+	top:48px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	background-color:#FFF;
+
+	border:1px solid #ccc;
+}
+.content .activity{
+	height:60px;
+}
+.content .activity a{
+	margin-top: 15px;
+	float: left;
+	font-size: 25px;
+	color: #ccc;
+	line-height: 48px;
+}
+.content .activity input{
+	margin-top: 15px;
+	width: 120px;
+	height: 40px;
+	float: right;
+	border-radius:5px;
+	border: 0px solid #f00;
+	outline: none;
+	background-color: #54B9CD;
+	color: white;
+}.content h3{
+	color:#000;
+	
+ }
