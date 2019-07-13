@@ -14,17 +14,17 @@
 </head>
 
 <body>
-  <div class="bd">
-    <header class="header">
+  <div class="lgl_bd">
+    <header class="lgl_header">
       <!--顶部栏-->
-      <div class="header_logo">
+      <div class="lgl_header_logo">
         <img src="./img/LOGO.JPG">
         <!--logo图-->
       </div>
-      <div class="header_center">
+      <div class="lgl_header_center">
         <!--中间搜索框-->
         <div class="input-group">
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" id="search" name="search">
           <!--输入框-->
           <span class="input-group-btn">
             <button class="btn btn-default" type="button" style="background-color:white;"><i
@@ -33,24 +33,24 @@
           </span>
         </div>
       </div>
-      <div class="header_right">
+      <div class="lgl_header_right">
         <!--个人信息/状态栏-->
-        <div class="header_right_icon">
+        <div class="lgl_header_right_icon" id="personal_pic" name="personal_pic">
           <!--头像-->
 
         </div>
-        <div class="header_right_user">
+        <div class="lgl_header_right_user" id="username" name="username">
           <!--昵称-->
           lin
         </div>
-        <div class="header_right_menu_icon">
+        <div class="lgl_header_right_menu_icon">
           <!--下拉菜单：可设置成点击弹出：进行个人信息修改/退出-->
           <i class="fa fa-chevron-down fa-lg"></i>
         </div>
       </div>
     </header>
-    <div class="content">
-      <div class="Rolling">
+    <div class="lgl_content">
+      <div class="lgl_Rolling">
         <!--滚动图-->
         <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -96,66 +96,74 @@
 
         </div><!--demo-->
       </div><!--rolling-->
-	  <!--视频分区-->
-	  <div class="partition" id="donghua">
-		<div class="partition_head">
-			<div class="partition_head_left">
-				<div class="partition_head_left_icon">
+	  <!--分区模块-->
+	  <div class="lgl_partition" id="donghua">
+		<div class="lgl_partition_head">
+			<div class="lgl_partition_head_left">
+				<div class="lgl_partition_head_left_icon">
 				<img src="img/国产动画.png"/>
 				</div>
 				<label>动画</label>
 			</div>
-		
+			<div class="lgl_partition_head_right">
+				<button><img src="./img/more_circle.png"/></button>
+			</div>
 		</div>
-		<div class="partition_video">
+		<div class="lgl_partition_video">
 			
 		</div>
 	  </div>
-	  <div class="partition" id="jilupian">
-		<div class="partition_head">
-			<div class="partition_head_left">
-				<div class="partition_head_left_icon">
+	  <div class="lgl_partition" id="jilupian">
+		<div class="lgl_partition_head">
+			<div class="lgl_partition_head_left">
+				<div class="lgl_partition_head_left_icon">
 				<img src="img/录像.png"/>
 				</div>
 				<label>纪录片</label>
 			</div>
-		
+			<div class="lgl_partition_head_right">
+				<button><img src="./img/more_circle.png"/></button>
+			</div>
 		</div>
-		<div class="partition_video">
+		<div class="lgl_partition_video">
 			
 		</div>
 	  </div>
-	  <div class="partition" id="youxi">
-		<div class="partition_head">
-			<div class="partition_head_left">
-				<div class="partition_head_left_icon">
+	  <div class="lgl_partition" id="youxi">
+		<div class="lgl_partition_head">
+			<div class="lgl_partition_head_left">
+				<div class="lgl_partition_head_left_icon">
 				<img src="img/游戏.png"/>
 				</div>
 				<label>游戏</label>
 			</div>
-		
+			<div class="lgl_partition_head_right">
+				<button><a href="http://www.qq.com"><img src="./img/more_circle.png"/></a></button>
+			</div>
 		</div>
-		<div class="partition_video">
+		<div class="lgl_partition_video">
 			
 		</div>
 	  </div>
-	  <div class="partition" id="dongman">
-		<div class="partition_head">
-			<div class="partition_head_left">
-				<div class="partition_head_left_icon">
+	  <div class="lgl_partition" id="dongman">
+		<div class="lgl_partition_head">
+			<div class="lgl_partition_head_left">
+				<div class="lgl_partition_head_left_icon">
 				<img src="img/动漫.png"/>
 				</div>
 				<label>动漫</label>
 			</div>
-		
+			<div class="lgl_partition_head_right">
+				<button><img src="./img/more_circle.png"/></button>
+			</div>
 		</div>
-		<div class="partition_video">
+		<div class="lgl_partition_video">
 			
 		</div>
 	  </div>
-	  <div class="Navigation"><!--侧面导航条-->
+	  <div class="lgl_Navigation">
 		<ul>
-			<li><img src="./img/列表导航.png"/></li>
+			<li><a onclick="location.reload()"><img src="./img/列表导航.png" /></a></li>
 			
 			<li><a href="#donghua">动画</a></li>
 			<li><a href="#jilupian">纪录片</a></li>
