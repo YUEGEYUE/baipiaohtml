@@ -35,7 +35,7 @@ body{
 .lgl_header_center{
 	width:300px;
 	margin: auto;
-	height: 0px;
+	height: 48px;
 	margin-top: 7px;
 	
 }
@@ -45,7 +45,7 @@ body{
 	height:48px;
 	float:right;
 	padding:0px;
-
+	margin-top:7px;
 }
 .lgl_header_right_icon{
 	border:2px solid white;
@@ -79,6 +79,30 @@ img{
 	background-color:#FFF;
 
 	border:0px solid #ccc;
+}
+.lgl_content .lgl_menu{
+	margin:auto;
+	height:48px;
+	border:0px solid blue;
+	width:1400px;
+}
+.lgl_content .lgl_menu a{
+	color:#d81e06;
+	text-decoration:none;
+	
+}
+.lgl_content .lgl_menu .lgl_menu_left{
+	float:left;
+	text-align:center;
+	font-family:"仿宋";
+	font-size:20px;
+	margin-top:7px;
+	width:300px;
+
+}
+.lgl_content .lgl_menu .lgl_menu_right{
+	float:right;
+	margin-top:6px;
 }
 .lgl_content .lgl_partition{
 	margin-top:10px;

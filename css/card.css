@@ -6,6 +6,9 @@
 .ghy_nopadding{
     padding: 0px;
 }
+.ghy_noborder{
+    border: 0px solid red;
+}
 .ghy_color{
     background-color: rgba(228, 86, 86, 0.6);
     color: rgb(248, 236, 236);
