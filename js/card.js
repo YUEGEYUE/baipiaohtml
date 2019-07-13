@@ -9,7 +9,7 @@ $(document).ready(function(){
         "<div "+ 'class='+'"card-body ghy_nopadding"'+">"+
         "<div "+ 'class='+'"card img-fluid ghy_noborder"'+">"+
         "<img "+ 'class='+'"ghy_card_size"'+'src='+data.videoPic
-        +" alt"+'='+'"Cardimage"'+">"+
+        +" alt"+'='+data.videoTitle+">"+
         "<div "+ 'class='+'"card-img-overlay ghy_text_overflow ghy_color"'+">"+
         "<i "+ 'class='+'"fa fa-play-circle fa-lg"'+">"+"</i>"+"："+data.playVolume+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
         "<i "+ 'class='+'"fa fa-list-alt fa-lg"'+">"+"</i>"+"："+data.commentVolume+"</br>"+
