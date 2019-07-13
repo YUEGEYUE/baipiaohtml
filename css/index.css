@@ -4,7 +4,7 @@ body{
 	margin:0px 0px 0px 0px;
 	padding:0px;
 }
-.bd{
+.lgl_bd{
 	position:absolute;
 	top:0px;
 	right:0px;
@@ -12,7 +12,7 @@ body{
 	left:0px;
 	background:#fff;
 }
-.header{
+.lgl_header{
 	position:absolute;
 	top:0px;
 	right:0px;
@@ -20,7 +20,7 @@ body{
 	height:48px;
 	background-color:#ee1c1b;
 }
-.header_logo{
+.lgl_header_logo{
 	width:200px;
 	text-align:center;
 	bottom:14px;
@@ -28,18 +28,18 @@ body{
 	float:left;
 	
 }
-.header_logo img{
+.lgl_header_logo img{
 		height:48px;
 	}
 
-.header_center{
+.lgl_header_center{
 	width:300px;
 	margin: auto;
 	height: 0px;
 	margin-top: 7px;
 	
 }
-.header_right{
+.lgl_header_right{
 
 	width:200px;
 	height:48px;
@@ -47,7 +47,7 @@ body{
 	padding:0px;
 
 }
-.header_right_icon{
+.lgl_header_right_icon{
 	border:2px solid white;
 	width:32px;
 	height:32px;
@@ -56,7 +56,7 @@ body{
 	background-size:32px 32px;
 	float:left;
 }
-.header_right_user{
+.lgl_header_right_user{
 	width:120px;
 	line-height:32px;
 	text-align:center;
@@ -69,7 +69,7 @@ img{
 	width:100%;
 	height:300px;
 }
-.content{
+.lgl_content{
 	position:absolute;
 	float:left;
 	top:48px;
@@ -80,32 +80,33 @@ img{
 
 	border:0px solid #ccc;
 }
-.content .partition{
+.lgl_content .lgl_partition{
 	margin-top:10px;
 	width:1400px;
 	height:300px;
 	margin: auto;
 	
-}.cotent .partition img{
+}
+.lgl_cotent .lgl_partition img{
 	width:100%;
 	height:300px;
 }
-.content .partition .partition_head{
+.lgl_content .lgl_partition .lgl_partition_head{
 	padding:7px;
 	height:48px;
-	border:1px solid #ccc;
+	border:1px solid #d81e06;
 }
-.content .partition .partition_head_left{
+.lgl_content .lgl_partition .lgl_partition_head_left{
 	float:left;
 	font-family:"黑体";
 	font-size:25px;
 }
-.content .partition .partition_head_left img{
+.lgl_content .lgl_partition .lgl_partition_head_left img{
 	width:32px;
 	height:32px;
 	margin-bottom:10px;
 }
-.content .partition .partition_head_left_icon{
+.lgl_content .lgl_partition .lgl_partition_head_left_icon{
 	border:0px solid white;
 	width:35px;
 	height:35px;
@@ -114,39 +115,58 @@ img{
 	background-size:35px 35px;
 	float:left;
 }
-.content .partition .partition_video{
-	height:300px;
-	border:1px solid #ccc;
+.lgl_content .lgl_partition .lgl_partition_head_right{
+	float:right;
+	width:35px;
+	height:35px;
+	margin-bottom:10px;
 }
-.Navigation{
+.lgl_content .lgl_partition .lgl_partition_head_right img{
+	float:right;
+	width:35px;
+	height:35px;
+	margin-bottom:10px;
+}
+.lgl_content .lgl_partition .lgl_partition_head_right button{
+	border:0px solid white;
+	background-color:white;
+	width:35px;
+	height:35px;
+	
+}
+.lgl_content .lgl_partition .lgl_partition_video{
+	height:300px;
+	border:1px solid #d81e06;
+}
+.lgl_Navigation{
 	position:fixed;
 	float:right;
 	top:400px;
-	border:1px solid #ccc;
+	border:2px solid #d81e06;
 	width:60px;
-	height:210px;
+	height:204px;
 	right:10px;
 	background-color:#e5e9ef;
 	list-style:none;
 }
-.Navigation ul{
+.lgl_Navigation ul{
 	list-style:none;
 	padding:0;
 	margin:auto;
 	color:red;
 	text-decoration:none;
 }
-.Navigation ul li{
+.lgl_Navigation ul li{
 	border-bottom:1px solid #ccc;
 	font-size:17px;
 	color:#d81e06;
-	
+	text-align:center;
 }
-.Navigation ul a{
+.lgl_Navigation ul a{
 	color:#d81e06;
 	text-decoration:none;
 }
-.Navigation img{
+.lgl_Navigation img{
 	width:48px ;
 	height:48px;
 }
