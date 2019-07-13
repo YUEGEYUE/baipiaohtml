@@ -1,5 +1,5 @@
 @charset "utf-8";
-.head-contain {
+.y_head-contain {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -7,34 +7,34 @@
     height: 200px;
 }
 
-.menu {
+.y_menu {
     position: absolute;
     top: 0px;
     right: 0px;
     height: 50px;
     left: 0px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color:#ee1c1b;
 }
 
-.menu .leader {
+.y_menu .y_leader {
     float: left;
     width: 500px;
     height: 50px;
     margin: 0px 100px;
 }
 
-.menu .leader ul {
+.y_menu .y_leader ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.menu .leader ul li {
+.y_menu .y_leader ul li {
     float: left;
 }
 
-.menu .leader ul li a {
+.y_menu .y_leader ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -42,17 +42,17 @@
     text-decoration: none;
 }
 
-.menu .leader ul li a:hover {
+.y_menu .y_leader ul li a:hover {
     background-color: #93DEEC;
 }
 
-.menu .menu-right {
+.y_menu .y_menu-right {
     float: left;
     height: 50px;
     width: 300px;
 }
 
-.body {
+.y_body {
     position: absolute;
     top: 200px;
     right: 0px;
@@ -61,7 +61,7 @@
     height: 100%;
 }
 
-.body .body-view {
+.y_body .y_body-view {
     position: absolute;
     width: 100%;
     margin-top: 20px;
@@ -69,7 +69,7 @@
     height: 100%;
 }
 
-.body .body-view .body-l {
+.y_body .y_body-view .y_body-l {
     position: absolute;
     float: left;
     width: 1117px;
@@ -78,32 +78,32 @@
     background-color: rgb(179, 228, 207);
 }
 
-.body .body-view .body-l .view-report {
+.y_body .y_body-view .y_body-l .y_view-report {
     height: 81px;
     background-color: rgb(224, 175, 168);
 }
 
-.body .body-view .body-l .video-title {
+.y_body .y_body-view .y_body-l .y_video-y_title {
     height: 36px;
     margin-bottom: 5px;
 }
 
-.body .body-view .body-l .video-title .title {
+.y_body .y_body-view .y_body-l .y_video-y_title .y_title {
     top: 0px;
     font-size: 30px;
     text-align: center;
 }
 
-.body .body-view .body-l .video-title .date {
+.y_body .y_body-view .y_body-l .y_video-y_title .y_date {
     top: 0px;
     font-size: 20px;
     text-align: center;
 }
-.body .body-view .body-l .video{
+.y_body .y_body-view .y_body-l .y_video{
     width: 100%;
     height: 800px;
 }
-.body .body-view .body-r {
+.y_body .y_body-view .y_body-r {
     position: absolute;
     float: left;
     left:1357px;
