@@ -1,55 +1,22 @@
 @charset "utf-8";
-.card_size{
+.ghy_card_size{
     width: 200px;
     height:150px;
 }
-.nopadding{
+.ghy_nopadding{
     padding: 0px;
 }
-
-.box {
-    overflow: hidden;
-    position: absolute;
-    transition: all 0.3s;
+.ghy_color{
+    background-color: rgba(228, 86, 86, 0.6);
+    color: rgb(248, 236, 236);
 }
-.box:before {
-    background-color: transparent;
-    background-size: 30px 30px;
-    transition: all 0.3s ease 0.2s;
-}
-.box img {
-    width: 100%;
-    height: auto;	
-}
-.box:hover img {
-    filter: blur(2px);
-}
-.box .num{
-    background: rgba(241, 6, 6, 0.5);
-    height: 40px;
-    width: 100%;
-    padding: 15px 0 0;
-	margin: 0;
-	transform: translateX(50%);
-	position: absolute;
-	right: 50%;
-	bottom: -100%;
-	transition: all 0.3s;
-}
-.box:hover .num {
-    bottom: 0;
-}
-.box .num li {
-    display: inline-block;
-    color: seashell;
-    margin: 0 3px;
-}
-
-.text_overflow{
+.ghy_text_overflow{ 
     width:100%;
     white-space:nowrap;
     text-overflow:ellipsis;
     -o-text-overflow:ellipsis;
     overflow:hidden;
-    }
-    /* 关浩延 */
+    padding: 0px;
+    top: auto;
+}
+/* 关浩延 */
