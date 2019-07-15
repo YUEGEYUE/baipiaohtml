@@ -19,7 +19,9 @@ body{
 	left:0px;
 	height:48px;
 	background-color:#ee1c1b;
+	z-index:6;
 }
+
 .lgl_header_logo{
 	width:200px;
 	text-align:center;
@@ -31,16 +33,13 @@ body{
 .lgl_header_logo img{
 		height:48px;
 	}
-
-.lgl_header_center{
-	width:300px;
-	margin: auto;
-	height: 48px;
-	margin-top: 7px;
+.Rolling{
+	z-index:4;
 	
 }
-.lgl_header_right{
 
+.lgl_header_right{
+	z-index:6;
 	width:200px;
 	height:48px;
 	float:right;
@@ -55,15 +54,73 @@ body{
 	background-image:url("../img/1.jpg");
 	background-size:32px 32px;
 	float:left;
+	
 }
-.lgl_header_right_user{
-	width:120px;
+
+
+
+.lgl_header_right_message button{
+	color:#000;
+	background-color: #ee1c1b;
+	border:0px;
+	width: 60px;
+	height:32px;
+}
+.lgl_header_right_message button:hover{
+	border:0px solid #ccc;
+	color: #ccc;
+
+}
+
+.lgl_header_right_message{
+	width:60px;
 	line-height:32px;
 	text-align:center;
 	float:left;
 	font-family:"仿宋";
 	font-size:20px;
-	color:white;
+	color:#000;
+	margin-left:20px;
+}
+.lgl_header_right_message .point{
+	margin-left: 44px;
+	width:7px;
+	height:7px;
+	border-radius: 3px;
+	border:1px solid #000;
+	background-color: #000;
+
+}
+.lgl_header_right_message ul{
+	list-style:none;
+	padding:0;
+	margin:auto;
+	color:red;
+	text-decoration:none;
+}
+.lgl_header_right_message ul li{
+	border-bottom:1px solid #ccc;
+	font-size:17px;
+	color:#d81e06;
+	text-align:center;
+}
+.lgl_header_right_message ul a{
+	color:#d81e06;
+	text-decoration:none;
+}
+.lgl_header_right_exit{
+	margin-top:7px;
+	width:50px;
+	height:40px;
+	float:left;
+	margin-left:30px;
+	}
+.lgl_header_right_exit a{
+	color: #000; 
+	text-decoration: none;
+}
+.lgl_header_right_exit a:hover{
+	color: #ccc;
 }
 img{
 	width:100%;
@@ -80,6 +137,7 @@ img{
 
 	border:0px solid #ccc;
 }
+
 .lgl_content .lgl_menu{
 	margin:auto;
 	height:48px;
@@ -107,7 +165,7 @@ img{
 .lgl_content .lgl_partition{
 	margin-top:10px;
 	width:1400px;
-	height:300px;
+	height:320px;
 	margin: auto;
 	
 }
@@ -135,7 +193,7 @@ img{
 	width:35px;
 	height:35px;
 	border-radius:2px;
-	//background-image:url("../img/游戏.png");
+
 	background-size:35px 35px;
 	float:left;
 }
@@ -159,7 +217,7 @@ img{
 	
 }
 .lgl_content .lgl_partition .lgl_partition_video{
-	height:300px;
+	height:320px;
 	border:1px solid #d81e06;
 }
 .lgl_Navigation{
