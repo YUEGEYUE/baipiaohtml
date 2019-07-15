@@ -19,46 +19,31 @@ body{
 	left:0px;
 	height:48px;
 	background-color:#ee1c1b;
-	z-index:6;
+	margin: auto;
 }
 
 .lgl_header_logo{
 	width:200px;
-	text-align:center;
-	bottom:14px;
-	height:48px;
 	float:left;
-	
 }
 .lgl_header_logo img{
 		height:48px;
 	}
-.Rolling{
-	z-index:4;
-	
-}
-
 .lgl_header_right{
-	z-index:6;
 	width:200px;
-	height:48px;
 	float:right;
 	padding:0px;
 	margin-top:7px;
 }
 .lgl_header_right_icon{
-	border:2px solid white;
+	border:2px solid #ccc;
 	width:32px;
 	height:32px;
 	border-radius:32px;
 	background-image:url("../img/1.jpg");
 	background-size:32px 32px;
 	float:left;
-	
 }
-
-
-
 .lgl_header_right_message button{
 	color:#000;
 	background-color: #ee1c1b;
@@ -69,15 +54,10 @@ body{
 .lgl_header_right_message button:hover{
 	border:0px solid #ccc;
 	color: #ccc;
-
 }
 
 .lgl_header_right_message{
-	width:60px;
-	line-height:32px;
-	text-align:center;
 	float:left;
-	font-family:"仿宋";
 	font-size:20px;
 	color:#000;
 	margin-left:20px;
@@ -89,29 +69,9 @@ body{
 	border-radius: 3px;
 	border:1px solid #000;
 	background-color: #000;
-
-}
-.lgl_header_right_message ul{
-	list-style:none;
-	padding:0;
-	margin:auto;
-	color:red;
-	text-decoration:none;
-}
-.lgl_header_right_message ul li{
-	border-bottom:1px solid #ccc;
-	font-size:17px;
-	color:#d81e06;
-	text-align:center;
-}
-.lgl_header_right_message ul a{
-	color:#d81e06;
-	text-decoration:none;
 }
 .lgl_header_right_exit{
 	margin-top:7px;
-	width:50px;
-	height:40px;
 	float:left;
 	margin-left:30px;
 	}
@@ -128,50 +88,36 @@ img{
 }
 .lgl_content{
 	position:absolute;
-	float:left;
 	top:48px;
 	right:0px;
 	bottom:0px;
 	left:0px;
 	background-color:#FFF;
-
 	border:0px solid #ccc;
 }
-
 .lgl_content .lgl_menu{
 	margin:auto;
 	height:48px;
-	border:0px solid blue;
 	width:1400px;
 }
 .lgl_content .lgl_menu a{
 	color:#d81e06;
 	text-decoration:none;
-	
 }
 .lgl_content .lgl_menu .lgl_menu_left{
 	float:left;
-	text-align:center;
 	font-family:"仿宋";
 	font-size:20px;
 	margin-top:7px;
-	width:300px;
-
 }
 .lgl_content .lgl_menu .lgl_menu_right{
 	float:right;
-	margin-top:6px;
+	margin-top:7px;
 }
 .lgl_content .lgl_partition{
-	margin-top:10px;
 	width:1400px;
-	height:320px;
+	height:402px;
 	margin: auto;
-	
-}
-.lgl_cotent .lgl_partition img{
-	width:100%;
-	height:300px;
 }
 .lgl_content .lgl_partition .lgl_partition_head{
 	padding:7px;
@@ -193,15 +139,11 @@ img{
 	width:35px;
 	height:35px;
 	border-radius:2px;
-
 	background-size:35px 35px;
 	float:left;
 }
 .lgl_content .lgl_partition .lgl_partition_head_right{
 	float:right;
-	width:35px;
-	height:35px;
-	margin-bottom:10px;
 }
 .lgl_content .lgl_partition .lgl_partition_head_right img{
 	float:right;
@@ -214,11 +156,11 @@ img{
 	background-color:white;
 	width:35px;
 	height:35px;
-	
 }
 .lgl_content .lgl_partition .lgl_partition_video{
-	height:320px;
+	height:325px;
 	border:1px solid #d81e06;
+	clear: both;
 }
 .lgl_Navigation{
 	position:fixed;
@@ -229,14 +171,13 @@ img{
 	height:204px;
 	right:10px;
 	background-color:#e5e9ef;
-	list-style:none;
+
 }
 .lgl_Navigation ul{
 	list-style:none;
 	padding:0;
 	margin:auto;
 	color:red;
-	text-decoration:none;
 }
 .lgl_Navigation ul li{
 	border-bottom:1px solid #ccc;
@@ -249,6 +190,6 @@ img{
 	text-decoration:none;
 }
 .lgl_Navigation img{
-	width:48px ;
+	width:48px;
 	height:48px;
 }
