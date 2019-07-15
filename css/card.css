@@ -1,7 +1,12 @@
 @charset "utf-8";
+.ghy_margin{
+    margin: 0 25px 5px 0;
+    float: left;
+}
 .ghy_card_size{
     width: 200px;
     height:150px;
+    border: 1px solid gray;
 }
 .ghy_nopadding{
     padding: 0px;
@@ -10,8 +15,8 @@
     border: 0px solid red;
 }
 .ghy_color{
-    background-color: rgba(228, 86, 86, 0.6);
-    color: rgb(248, 236, 236);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(238, 57, 57);
 }
 .ghy_text_overflow{ 
     width:100%;
