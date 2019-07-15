@@ -1,14 +1,13 @@
 @charset "utf-8";
 .ghy_margin{
-    margin: 0 25px 5px 0;
-    float: left;
+    margin: 5px 25px 5px 8px;  
 }
 .ghy_card_size{
     width: 200px;
     height:150px;
     border: 1px solid gray;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .ghy_nopadding{
     padding: 0px;
