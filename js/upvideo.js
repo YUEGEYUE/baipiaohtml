@@ -48,7 +48,45 @@ $(document).ready(function () {
             ){
 
         }else{
-            
+            var formData = new FormData();
+			formData.append("upvid", $("#upvid")[0].files[0]);
+			formData.append("videoPic", $("#videoPic")[0].files[0]);
+			formData.append("videoTitle", $("#videoTitle").val());
+			formData.append("videoType", $("#videoType").val());
+			formData.append("videoIntroduction", $("#videoIntroduction").text());
+			formData.append("userId", $("#userId").val());
+			$.ajax({
+				url: './upload_file.php',
+				type: 'post',
+                data: formData,
+                dataType:JSON,
+				async: true,
+				cache: false,
+				contentType: false,
+				processData: false,
+				xhr: function () {
+					myXhr = $.ajaxSettings.xhr();
+					if (myXhr.upload) { // check if upload property exists
+						myXhr.upload.addEventListener('progress', function (e) {
+							var loaded = e.loaded;                  //已经上传大小情况 
+							var total = e.total;                      //附件总大小 
+							var percent = Math.floor(100 * loaded / total) + "%";     //已经上传的百分比  
+							console.log("已经上传了：" + percent);
+							$("#processBar").css("width", percent);
+						}, false); // for handling the progress of the upload
+					}
+					return myXhr;
+				},
+				error:function(e){
+                    console.log(e.respondText);
+                    
+                },
+                
+				success: function (res) {
+					console.log(res.data);
+
+				}
+			})
         }
     });
 });
