@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#vidshow").hide();
 
 
-    $("#upvid").change(function () {
+    $("#videoUrl").change(function () {
         var files = this.files;
         var file = files[0];
         // alert(file.name);
@@ -33,6 +33,22 @@ $(document).ready(function () {
         reader.onload = function (e) {
             var urlsrc = this.result;
             $('#vpic').attr('src', urlsrc);
+        }
+    });
+
+
+    $("#subbut").click(function () { 
+        // e.preventDefault();
+        if($("#videoTitle").val()==""||("#videoTitle").val()==null
+            ||$("#videoUrl").val()==""||("#videoUrl").val()==null
+            ||$("#videoPic").val()==""||("#videoPic").val()==null
+            ||$("#videoType").val()==""||("#videoType").val()==null
+            ||$("#videoIntroduction").text()==""||("#videoIntroduction").text()==null
+            // ||$("#videoTitle").val()==""||("#videoTitle").val()==null usserid
+            ){
+
+        }else{
+            
         }
     });
 });
