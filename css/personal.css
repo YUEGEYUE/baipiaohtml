@@ -1,1 +1,153 @@
 @charset "utf-8";
+body{
+	/*background-color:#000;*/
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+.lgl_bd{
+	position:absolute;
+	top:0px;
+	right:0px;
+	bottom:50px;
+	left:0px;
+    background:#fff;
+    min-width: 1300px;
+}
+.lgl_header{
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	height:48px;
+	background-color:#ee1c1b;
+	margin: auto;
+}
+
+.lgl_header_logo{
+	width:200px;
+	float:left;
+}
+.lgl_header_logo img{
+		height:48px;
+	}
+.lgl_header_right{
+	width:100px;
+	float:right;
+	padding:0px;
+	margin-top:7px;
+}
+.lgl_header_right_icon{
+	border:2px solid #ccc;
+	width:32px;
+	height:32px;
+	border-radius:32px;
+	background-image:url("../img/1.jpg");
+	background-size:32px 32px;
+	float:left;
+}
+.lgl_header_right_message button{
+	color:#000;
+	background-color: #ee1c1b;
+	border:0px;
+	width: 60px;
+	height:32px;
+}
+.lgl_header_right_message button:hover{
+	border:0px solid #ccc;
+	color: #ccc;
+}
+
+.lgl_header_right_message{
+	float:left;
+	font-size:20px;
+	color:#000;
+	margin-left:20px;
+}
+.lgl_header_right_message .point{
+	margin-left: 44px;
+	width:7px;
+	height:7px;
+	border-radius: 3px;
+	border:1px solid #000;
+	background-color: #000;
+}
+.lgl_header_right_exit{
+	margin-top:7px;
+	float:left;
+	margin-left:30px;
+	}
+.lgl_header_right_exit a{
+	color: #000; 
+	text-decoration: none;
+}
+.lgl_header_right_exit a:hover{
+	color: #ccc;
+}
+.lgl_banner{
+    position: absolute;
+    margin-top: 48px;
+    height:200px;
+    border-bottom:1px solid red;
+}
+.lgl_banner img{
+    height:200px;
+    width: 100%;
+}
+.lgl_container{
+	position:absolute;
+	top:48px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	background-color:#FFF;
+	border:0px solid #ccc;
+}
+.lgl_menu{
+    position: absolute;
+    float: left;
+    width: 300px;
+    height: 100%;
+    margin-top: 248px;
+    border-right: 1px solid #d81e06;
+}
+.lgl_menu ul{
+	list-style:none;
+	padding:0;
+	margin:auto;
+	color:red;
+}
+.lgl_menu ul li{
+	border-bottom:1px solid #ccc;
+	font-size:17px;
+	color:#d81e06;
+    text-align:center;
+    height: 40px;
+    margin-top: 10px;
+}
+.lgl_menu ul a{
+	color:#d81e06;
+    text-decoration:none;
+}
+.lgl_content{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    float: right;
+    margin-top: 248px;
+    margin-left: 300px;
+}
+.lgl_content .lgl_update_pic{
+    position: absolute;
+    margin: auto;
+    border: 1px solid red;
+    
+    left:50%;top:50%;margin-left:-200px;margin-top:-150px; 
+    
+}
+.lgl_content img{
+    width: 80px;
+    height: 80px;
+    
+}
