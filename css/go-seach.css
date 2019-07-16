@@ -18,7 +18,7 @@ html,body{
     bottom:0px;
     left:0px;
     height:50px;
-    width:1400px;
+    width:1900px;
     background-color:#ee1c1b;
 }
 .yfm_header_img{
@@ -47,7 +47,7 @@ html,body{
     left:0px;
     margin-top:55px;
     margin-left:70px;
-   width:1300px;
+   width:1600px;
    height:500px;
    background-color:#fff;
    
@@ -62,14 +62,15 @@ html,body{
      text-align:center;
      line-height: 40px;
      margin-top:40px;
-     margin-left:5px;
+     margin-left:100px;
+     width:100%;
  }
  
  
  .yfm_title{
      position:absolute;
      margin-top:300px;
-     margin-left:300px;
+     margin-left:500px;
      font-size:22px;
      width:120px;
      color:#ffffff;
@@ -78,13 +79,13 @@ html,body{
  
      position:absolute;
      margin-top:350px;
-     margin-left:300px;
+     margin-left:500px;
      text-align: center;
      line-height: 64px;
  }
  .yfm_content_img{
      margin-top:500px;
-     margin-left:50px;
+     margin-left:400px;
  }
  /*.yfm_page{
     text-align: center;
