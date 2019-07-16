@@ -39,17 +39,17 @@ $(document).ready(function () {
 
     $("#subbut").click(function () { 
         // e.preventDefault();
-        if($("#videoTitle").val()==""||("#videoTitle").val()==null
-            ||$("#videoUrl").val()==""||("#videoUrl").val()==null
-            ||$("#videoPic").val()==""||("#videoPic").val()==null
-            ||$("#videoType").val()==""||("#videoType").val()==null
-            ||$("#videoIntroduction").text()==""||("#videoIntroduction").text()==null
+        if($("#videoTitle").val()==""
+            ||$("#videoUrl").val()==""
+            ||$("#videoPic").val()==""
+            ||$("#videoType").val()==""
+            ||$("#videoIntroduction").text()==""
             // ||$("#videoTitle").val()==""||("#videoTitle").val()==null usserid
             ){
 
         }else{
             var formData = new FormData();
-			formData.append("upvid", $("#upvid")[0].files[0]);
+			formData.append("videoUrl", $("#videoUrl")[0].files[0]);
 			formData.append("videoPic", $("#videoPic")[0].files[0]);
 			formData.append("videoTitle", $("#videoTitle").val());
 			formData.append("videoType", $("#videoType").val());
@@ -59,7 +59,7 @@ $(document).ready(function () {
 				url: './upload_file.php',
 				type: 'post',
                 data: formData,
-                dataType:JSON,
+                dataType : "json",
 				async: true,
 				cache: false,
 				contentType: false,

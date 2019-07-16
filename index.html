@@ -104,18 +104,20 @@
 					<a href="#dongman">动漫&nbsp;|</a>
 					<a href="#jilupian">纪录片</a>
 				</div>
-				<div class="lgl_menu_right">
-					<!--中间搜索框-->
-					<div class="input-group">
-						<input type="text" class="form-control" id="search" name="search">
-						<!--输入框-->
-						<span class="input-group-btn">
+				<form action="./loge/go-seach.html" method="post">
+					<div class="lgl_menu_right">
+						<!--中间搜索框-->
+						<div class="input-group">
+							<input type="text" class="form-control" id="search" name="search">
+							<!--输入框-->
+							<span class="input-group-btn">
 							<button class="btn btn-default" type="button" style="background-color:white;"><i
 									class="fa fa-search fa-lg"></i></button>
 							<!--搜索按钮-->
 						</span>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 
 			<!--分区模块-->
@@ -186,12 +188,16 @@
 				</div>
 				<div class="lgl_Navigation">
 					<ul>
-						<li><a onclick="location.reload()"><img src="./img/列表导航.png" /></a></li>
+						<li>
+							<a onclick="location.reload()"><img src="./img/列表导航.png" /></a>
+						</li>
 						<li><a href="#donghua">动画</a></li>
 						<li><a href="#youxi">游戏</a></li>
 						<li><a href="#dongman">动漫</a></li>
 						<li><a href="#jilupian">纪录片</a></li>
-						<li><a href="#top"><img src="./img/top.png" /></a></li>
+						<li>
+							<a href="#top"><img src="./img/top.png" /></a>
+						</li>
 					</ul>
 				</div>
 
