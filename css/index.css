@@ -36,25 +36,17 @@ body{
 	margin-top:7px;
 }
 .lgl_header_right_icon{
-	border:2px solid #ccc;
-	width:32px;
-	height:32px;
 	border-radius:32px;
-	background-image:url("../img/1.jpg");
-	background-size:32px 32px;
+	background-size:35px 35px;
 	float:left;
 }
-.lgl_header_right_message button{
-	color:#000;
-	background-color: #ee1c1b;
-	border:0px;
-	width: 60px;
-	height:32px;
+.lgl_header_right_icon img{
+	width:30px;
+	height:30px;
+	
 }
-.lgl_header_right_message button:hover{
-	border:0px solid #ccc;
-	color: #ccc;
-}
+
+
 
 .lgl_header_right_message{
 	float:left;
@@ -62,14 +54,7 @@ body{
 	color:#000;
 	margin-left:20px;
 }
-.lgl_header_right_message .point{
-	margin-left: 44px;
-	width:7px;
-	height:7px;
-	border-radius: 3px;
-	border:1px solid #000;
-	background-color: #000;
-}
+
 .lgl_header_right_exit{
 	margin-top:7px;
 	float:left;
