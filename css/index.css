@@ -11,6 +11,7 @@ body{
 	bottom:50px;
 	left:0px;
 	background:#fff;
+	min-width: 1500px;
 }
 .lgl_header{
 	position:absolute;
