@@ -31,10 +31,10 @@ $(document).ready(function () {
 
             "<div class='d-flex flex-wrap bg-light col-md-3'>" +
             "<div class='card'>" +
-            "<img class='ghy_card_size' src='./../img/abendstimmung-4315445__340.jpg' style='width:100% ' alt=da.videoTitle>" +
+            "<img class='ghy_card_size' src='./../img/9.PNG' style='width:100% ' alt=da.videoTitle>" +
             "<div class='card-img-overlay ghy_text_ovejrflow ghy_color'>" +
-            "<i class='fa fa-play-circle fa-lg'></i>" + ':' + da.playVolume +
-            "<i class='fa fa-list-alt fa-lg'> </i>" + ':' + da.commentVolume + '</br>' +
+            "<i class='fa fa-play-circle fa-lg' style='margin-top:120px;'></i>" + ':' + da.playVolume +'&nbsp;&nbsp;&nbsp;&nbsp;'+
+            "<i class='fa fa-list-alt fa-lg' style='margin-top:120px;'> </i>" + ':' + da.commentVolume + '</br>' +da.videoTitle+
             "</div>" +
 
             "</div>" +
@@ -46,6 +46,6 @@ $(document).ready(function () {
 
 });
 
-
+// yfm
 
 
