@@ -5,7 +5,7 @@
     
     ghy_obj=JSON.parse('[{ "playVolume":"100", "commentVolume":10000, "videoTitle":"白漂测试","videoPic":"./img/背景图.PNG" },{ "playVolume":"180", "commentVolume":100, "videoTitle":"白漂测试2","videoPic":"./img/top.png" },{ "playVolume":"6660", "commentVolume":105, "videoTitle":"白漂测试3333333333","videoPic":"./img/more_circle.png" }]');
     for(var i = 0;i < 12;i++){
-        $("#vcard").append(setc(ghy_obj[i%3]));
+        $(".vcard").append(setc(ghy_obj[i%3]));
     }
     
     function setc(data){
