@@ -86,6 +86,9 @@ img{
 	height:48px;
 	width:1400px;
 }
+.lgl_content .lgl_menu button{
+	background-color:white;
+}
 .lgl_content .lgl_menu a{
 	color:#d81e06;
 	text-decoration:none;
