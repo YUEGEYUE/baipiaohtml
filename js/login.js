@@ -24,9 +24,8 @@ $(document).ready(function () {
         if ($("#ghy_num").val() == '' || $("#ghy_pass").val() == '') {
             alert("登陆失败");
         } else {
+            $.post(com + "/api/v1/Login", {
 
-            $.post(com+"/api/v1/Login", {
-                
                 userName: $("#ghy_num").val(),
                 userPassword: $("#ghy_pass").val()
             },
@@ -56,11 +55,11 @@ $(document).ready(function () {
         if ($(this).val() == '') {
             $(this).css("border", "1px solid red");
             $(this).attr("placeholder", "邮箱不能为空");
-        } else if(!em.test($("#ghy_em").val())){
+        } else if (!em.test($("#ghy_em").val())) {
             $(this).css("border", "1px solid red");
-            $(this).val("") ;
+            $(this).val("");
             $(this).attr("placeholder", "邮箱格式错误");
-        } else{
+        } else {
             $(this).css("border", "1px solid #ced4da");
         }
     });
@@ -72,21 +71,18 @@ $(document).ready(function () {
             $(this).css("border", "1px solid #ced4da");
         }
     });
+
+
     $("#zhuce").click(function () {
-        if ($("#ghy_un").val() == '' || $("#ghy_pw").val() == ''||$("#ghy_em").val() == '') {
+        var em = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if ($("#ghy_un").val() == '' || $("#ghy_pw").val() == '' || $("#ghy_em").val() == '') {
             alert("注册失败");
+            return false;
+        } else if (!em.test($("#ghy_em").val())) {
+            alert('邮箱格式错误');
+            return false;
+
         } else {
-            var type = 0;
-            var em = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            if (!em.test($("#ghy_em").val())) {
-                alert("邮箱要验证是否带有@,必须以.com结尾");
-                type = 0;
-                return;
-            } else {
-                type = 1;
-            }
-
-
             $.post("url", {
                 type: type,
                 userName: "",
