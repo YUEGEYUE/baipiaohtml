@@ -22,19 +22,19 @@ $(document).ready(function () {
     });
     $("#denglu").click(function () {
         if ($("#ghy_num").val() == '' || $("#ghy_pass").val() == '') {
-            alert("登陆失败");
+            alert("请填写信息");
         } else {
 
             $.ajax({
                 type: "post",
-                url: com + "/api/v1/Login",
+                url: SERVERCOM + "/api/v1/Login",
                 data: {
                     userName: $("#ghy_num").val(),
                     userPassword: $("#ghy_pass").val()
                 },
                 dataType: "json",
                 success: function (response) {
-                    
+                    location.href='./../index.html';
                     console.log(response.data.userId);
                 },
                 error:function(re){
@@ -90,7 +90,7 @@ $(document).ready(function () {
         } else {
             $.ajax({
                 type: "post",
-                url: com + "/api/v1/register",
+                url: SERVERCOM + "/api/v1/register",
                 data: {
                     userName:$("#ghy_un").val(),
                     userPassword:$("#ghy_pw").val(),
