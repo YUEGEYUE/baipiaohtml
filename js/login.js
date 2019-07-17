@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#ghy_num").blur(function () {
         if ($(this).val() == '') {
             $(this).css("border", "1px solid red");
-            $(this).attr("placeholder", "用户名/邮箱不能为空");
+            $(this).attr("placeholder", "用户名不能为空");
 
             // alert("用户名/邮箱不能为空");
         } else {
@@ -24,21 +24,11 @@ $(document).ready(function () {
         if ($("#ghy_num").val() == '' || $("#ghy_pass").val() == '') {
             alert("登陆失败");
         } else {
-            var type = 0;
-            var em = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            if (!em.test($("#ghy_num").val())) {
-                alert("邮箱要验证是否带有@,必须以.com结尾");
-                type = 0;
-                return;
-            } else {
-                type = 1;
-            }
 
-
-            $.post("url", {
-                type: type,
-                userName: "",
-                userPassword: ""
+            $.post(com+"/api/v1/Login", {
+                
+                userName: $("#ghy_num").val(),
+                userPassword: $("#ghy_pass").val()
             },
                 function (data, Status) {
                     if (Status == 'success') {
