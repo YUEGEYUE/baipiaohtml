@@ -1,0 +1,1 @@
+var com='http://loaclhost:10004';
