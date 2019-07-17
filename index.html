@@ -110,17 +110,18 @@
 							<input type="text" class="form-control" id="search" name="search">
 							<!--输入框-->
 							<span class="input-group-btn">
-							<a href="./loge/go-seach.html"><button class="btn btn-default" type="button" style="background-color:white;"><i
-									class="fa fa-search fa-lg"></i></button></a>
-							<!--搜索按钮-->
-						</span>
+								<button class="btn btn-default" type="button"
+									onclick="window.location.href='./loge/go-seach.html'">
+									<i class="fa fa-search fa-lg"></i></button>
+								<!--搜索按钮-->
+							</span>
 						</div>
 					</div>
 				</form>
 			</div>
 
 			<!--分区模块-->
-				<div class="lgl_partition" id="donghua">
+			<div class="lgl_partition" id="donghua">
 				<div class="lgl_partition_head">
 					<div class="lgl_partition_head_left">
 						<div class="lgl_partition_head_left_icon">
@@ -129,7 +130,8 @@
 						<label>动画</label>
 					</div>
 					<div class="lgl_partition_head_right">
-						<button><a href="donghua.html"><img src="./img/more_circle.png" /></a></button>
+						<button onclick="window.location.href='donghua.html'"><img
+								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
 				<div>
@@ -137,85 +139,82 @@
 
 					</div>
 				</div>
-				</div>
-				<div class="lgl_partition" id="youxi">
-					<div class="lgl_partition_head">
-						<div class="lgl_partition_head_left">
-							<div class="lgl_partition_head_left_icon">
-								<img src="img/游戏.png" />
-							</div>
-							<label>游戏</label>
+			</div>
+			<div class="lgl_partition" id="youxi">
+				<div class="lgl_partition_head">
+					<div class="lgl_partition_head_left">
+						<div class="lgl_partition_head_left_icon">
+							<img src="img/游戏.png" />
 						</div>
-						<div class="lgl_partition_head_right">
-							<button><a href="youxi.html"><img src="./img/more_circle.png" /></a></button>
-						</div>
+						<label>游戏</label>
 					</div>
-					<div class="lgl_partition_video vcard">
+					<div class="lgl_partition_head_right">
+						<button onclick="window.location.href='youxi.html'"><img src="./img/more_circle.png" /></button>
+					</div>
+				</div>
+				<div class="lgl_partition_video vcard">
 
+				</div>
+			</div>
+			<div class="lgl_partition" id="dongman">
+				<div class="lgl_partition_head">
+					<div class="lgl_partition_head_left">
+						<div class="lgl_partition_head_left_icon">
+							<img src="img/动漫.png" />
+						</div>
+						<label>动漫</label>
+					</div>
+					<div class="lgl_partition_head_right">
+						<button onclick="window.location.href='dongman.html'"><img
+								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
-				<div class="lgl_partition" id="dongman">
-					<div class="lgl_partition_head">
-						<div class="lgl_partition_head_left">
-							<div class="lgl_partition_head_left_icon">
-								<img src="img/动漫.png" />
-							</div>
-							<label>动漫</label>
+				<div class="lgl_partition_video vcard">
+				</div>
+			</div>
+			<div class="lgl_partition" id="jilupian">
+				<div class="lgl_partition_head">
+					<div class="lgl_partition_head_left">
+						<div class="lgl_partition_head_left_icon">
+							<img src="img/录像.png" />
 						</div>
-						<div class="lgl_partition_head_right">
-							<button><a href="dongman.html"><img src="./img/more_circle.png" /></a></button>
-						</div>
+						<label>纪录片</label>
 					</div>
-					<div class="lgl_partition_video vcard">
+					<div class="lgl_partition_head_right">
+						<button onclick="window.location.href='jilupian.html'"><img
+								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
-				<div class="lgl_partition" id="jilupian">
-					<div class="lgl_partition_head">
-						<div class="lgl_partition_head_left">
-							<div class="lgl_partition_head_left_icon">
-								<img src="img/录像.png" />
-							</div>
-							<label>纪录片</label>
-						</div>
-						<div class="lgl_partition_head_right">
-							<button><a href="jilupian.html"><img src="./img/more_circle.png" /></a></button>
-						</div>
-					</div>
-					<div class="lgl_partition_video vcard">
+				<div class="lgl_partition_video vcard">
 
-					</div>
 				</div>
-				<div class="lgl_Navigation">
-					<ul>
-						<li>
-							<a onclick="location.reload()"><img src="./img/列表导航.png" /></a>
-						</li>
-						<li><a href="#donghua">动画</a></li>
-						<li><a href="#youxi">游戏</a></li>
-						<li><a href="#dongman">动漫</a></li>
-						<li><a href="#jilupian">纪录片</a></li>
-						<li>
-							<a href="#top"><img src="./img/top.png" /></a>
-						</li>
-					</ul>
-				</div>
+			</div>
+			<div class="lgl_Navigation">
+				<ul>
+					<li>
+						<a onclick="location.reload()"><img src="./img/列表导航.png" /></a>
+					</li>
+					<li><a href="#donghua">动画</a></li>
+					<li><a href="#youxi">游戏</a></li>
+					<li><a href="#dongman">动漫</a></li>
+					<li><a href="#jilupian">纪录片</a></li>
+					<li>
+						<a href="#top"><img src="./img/top.png" /></a>
+					</li>
+				</ul>
+			</div>
 
-			
-			<!--content-->
-		</div>
-		<!--bd-->
-		<script src="./js/jquery-3.4.1.min.js"></script>
-		<script src="./popper-1.15.0-dist/umd/popper.min.js"></script>
-		<script src="./bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 
-		<script src="./js/card.js"></script>
-		<script>
-			$(document).ready(function () {
-				$("#tt1").mouseenter(function () {
-					$("#tt1").click();
-				});
-			});
-		</script>
+		</div><!--content-->
+		
+	</div><!--bd-->
+	
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./popper-1.15.0-dist/umd/popper.min.js"></script>
+	<script src="./bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/card.js"></script>
+
 </body>
 
 </html>
