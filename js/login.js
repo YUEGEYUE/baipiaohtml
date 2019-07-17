@@ -25,20 +25,24 @@ $(document).ready(function () {
             alert("登陆失败");
         } else {
 
-            $.post(com + "/api/v1/Login", {
-
-                userName: $("#ghy_num").val(),
-                userPassword: $("#ghy_pass").val()
-            },
-                function (data, Status) {
-                    if (Status == 'success') {
-                        alert("登录成功");
-                    } else {
-                        alert("登录失败");
-                    }
+            $.ajax({
+                type: "post",
+                url: com + "/api/v1/Login",
+                data: {
+                    userName: $("#ghy_num").val(),
+                    userPassword: $("#ghy_pass").val()
                 },
+                dataType: "json",
+                success: function (response) {
+                    
+                    console.log(response.data.userId);
+                },
+                error:function(re){
+                    alert(JSON.parse(re.responseText)['msg']);
+                    
+                }
+            });
 
-            );
         }
 
     });
@@ -84,20 +88,22 @@ $(document).ready(function () {
             return false;
 
         } else {
-            $.post("url", {
-                type: type,
-                userName: "",
-                userPassword: ""
-            },
-                function (data, Status) {
-                    if (Status == 'success') {
-                        alert("注册成功");
-                    } else {
-                        alert("注册失败");
-                    }
+            $.ajax({
+                type: "post",
+                url: com + "/api/v1/register",
+                data: {
+                    userName:$("#ghy_un").val(),
+                    userPassword:$("#ghy_pw").val(),
+                    userEmail:$("#ghy_em").val()
                 },
-                "Json"
-            );
+                dataType: "json",
+                success: function (response) {
+                    alert('注册成功');
+                },
+                error(re){
+                    alert(JSON.parse(re.responseText)['msg']);
+                }
+            });
         }
 
     });
