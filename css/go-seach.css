@@ -58,7 +58,15 @@ width:100%;
      margin-left:500px;
      font-size:22px;
      width:120px;
-     color:#ffffff;
+     
+     color:#00e1ff;
+     -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+     transition: width 2s, height 2s, transform 2s;
+ }
+ .yfm_title:hover{
+    
+     -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+     transform: rotateY(180deg);
  }
  .input-group{
  
