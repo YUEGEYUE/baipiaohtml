@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // <p id="vcard"></p>
 
-    var j = JSON.parse('{ "playVolume":"100", "commentVolume":10000, "videoTitle":"白漂测试","videoPic":"https://static.runoob.com/images/mix/img_avatar.png" }');
+    var j = JSON.parse('{ "playVolume":"100", "commentVolume":10000, "videoTitle":"白漂测试","videoPic":"./../img/9.PNG" }');
     for (var i = 0; i < 24; i++) {
 
         $("#vcard").append(setc(j));
