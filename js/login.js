@@ -24,6 +24,7 @@ $(document).ready(function () {
         if ($("#ghy_num").val() == '' || $("#ghy_pass").val() == '') {
             alert("登陆失败");
         } else {
+
             $.post(com + "/api/v1/Login", {
 
                 userName: $("#ghy_num").val(),
@@ -36,7 +37,7 @@ $(document).ready(function () {
                         alert("登录失败");
                     }
                 },
-                "Json"
+
             );
         }
 
