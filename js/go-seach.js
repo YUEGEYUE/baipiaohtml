@@ -33,8 +33,8 @@ $(document).ready(function () {
             "<div class='card'>" +
             "<img class='ghy_card_size' src='./../img/9.PNG' style='width:100% ' alt=da.videoTitle>" +
             "<div class='card-img-overlay ghy_text_ovejrflow ghy_color'>" +
-            "<i class='fa fa-play-circle fa-lg' style='margin-top:120px;'></i>" + ':' + da.playVolume +'&nbsp;&nbsp;&nbsp;&nbsp;'+
-            "<i class='fa fa-list-alt fa-lg' style='margin-top:120px;'> </i>" + ':' + da.commentVolume + '</br>' +da.videoTitle+
+            "<i class='fa fa-play-circle fa-lg' style='margin-top:120px;'></i>" + ':' + da.playVolume + '&nbsp;&nbsp;&nbsp;&nbsp;' +
+            "<i class='fa fa-list-alt fa-lg' style='margin-top:120px;'> </i>" + ':' + da.commentVolume + '</br>' + da.videoTitle +
             "</div>" +
 
             "</div>" +
