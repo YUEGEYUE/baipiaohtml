@@ -34,8 +34,13 @@ $(document).ready(function () {
                 },
                 dataType: "json",
                 success: function (response) {
+                    CMAP.set("userId",response.data.userId);
+                    CMAP.set("userPic",response.data.userPic);
+                    CMAP.set("userName",response.data.userName);
+                    CMAP.set("userEmail",response.data.userEmail);
+                    saveCmap();
                     location.href='./../index.html';
-                    console.log(response.data.userId);
+                    // console.log(response.data.userId);
                 },
                 error:function(re){
                     alert(JSON.parse(re.responseText)['msg']);
