@@ -1,5 +1,6 @@
 var SERVERCOM = 'http://192.168.221.130:10007';
 var DANMUKEURL = 'http://192.168.221.130:1207';
+var THISROOT='http://localhost';
 var CMAP = new Map();
 // {
 //     "userId": 3,
