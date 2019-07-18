@@ -15,10 +15,9 @@ $(document).ready(function () {
         $("#lbf-userpic").attr("href", "./loge/login.html");
         $("#lbf-userpic").find("img").attr("src", "./img/mrt.jpg");
     }
+    
     $("#tt1").mouseenter(function () {
         $("#tt1").click();
-
-
     });
 });
 

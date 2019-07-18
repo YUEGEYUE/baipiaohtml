@@ -1,6 +1,10 @@
 // 林倍锋
 $(document).ready(function () {
-
+    CMAP = getCmap();
+    if(CMAP==null){
+        alert('请先登录');
+        location.href="./login.html";
+    }
     $("#vidshow").hide();
 
 
@@ -44,19 +48,19 @@ $(document).ready(function () {
             ||$("#videoPic").val()==""
             ||$("#videoType").val()==""
             ||$("#videoIntroduction").text()==""
-            // ||$("#videoTitle").val()==""||("#videoTitle").val()==null usserid
             ){
 
         }else{
+            alert(CMAP.get('userId'));
             var formData = new FormData();
 			formData.append("videoUrl", $("#videoUrl")[0].files[0]);
 			formData.append("videoPic", $("#videoPic")[0].files[0]);
 			formData.append("videoTitle", $("#videoTitle").val());
 			formData.append("videoType", $("#videoType").val());
 			formData.append("videoIntroduction", $("#videoIntroduction").text());
-			formData.append("userId", $("#userId").val());
+			formData.append("userId", CMAP.get('userId'));
 			$.ajax({
-				url: './upload_file.php',
+				url: SERVERCOM+'/api/v1/video',
 				type: 'post',
                 data: formData,
                 dataType : "json",
@@ -78,7 +82,7 @@ $(document).ready(function () {
 					return myXhr;
 				},
 				error:function(e){
-                    console.log(e.respondText);
+                    console.log(e.responseText);
                     
                 },
                 
