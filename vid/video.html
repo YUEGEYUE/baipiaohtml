@@ -5,94 +5,149 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" type="text/css" href="../css/video.css">
     <link rel="stylesheet" href="../DPlayer-dist/DPlayer.min.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
 </head>
 
+
 <body>
-
-    <div class="y_head-contain">
-        <div class="y_menu">
-            <div class="lgl_header_logo">
-                <img src="../img/LOGO.JPG">
-                <!--logo图-->
-            </div>
-            <nav class="y_leader">
-                <ul>
-                    <li>
-                        <a href="#">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Link 3</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="input-group col-md-3 input-group-sm" style="float:left;margin-top:9px;">
-                <input type="text" class="form-control" placeholder="..." />
-                <span class="input-group-btn">
-                    <button class="btn btn-info btn-sm">搜索</button>
-                </span>
-            </div>
-            <div class="y_menu-right">
-
+    <button onclick="topFunction()" id="myBtn" title="回顶部"><i class="fa fa-angle-up fa-lg"></i></button>
+    <div style="position:absolute;width:100%;height:100%;min-width:1920px;min-height: 1080px">
+        <div class="y_head-contain">
+            <div class="y_menu">
+                <div class="d-flex flex-row">
+                <div class="lgl_header_logo">
+                    <img src="../img/LOGO.jpg">
+                    <!--logo图-->
+                </div>
+                <nav class="y_leader" style="right: 0px">
+                    <ul>
+                        <li>
+                            <a href="../loge/go-seach.html">查找</a>
+                        </li>
+                        <li>
+                            <a href="../loge/personal.html">我的</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Link 3</a>
+                        </li> -->
+                    </ul>
+                </nav>
+                <!-- <div class="input-group col-md-3 input-group-sm" style="margin-top:9px;">
+                    <input type="text" class="form-control" placeholder="..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-sm">搜索</button>
+                    </span>
+                </div> -->
+                </div>
             </div>
         </div>
-    </div>
-    <div class="y_body">
-        <div class="y_body-view">
-            <div class="y_body-l">
-                <div class="y_view-report">
-                    <div class="y_video-title">
-                        <span class="y_title">title</span>
-                    </div>
-                    <div class="y_video-date">
-                        <span class="y_date">date</span>
-                    </div>
-                </div>
-                <div class="y_video">
-                    <div id="dplayer"></div>
-                </div>
-                <div class="y_video-summary">
-                    <div class="y_summary-info">
-                        summary
-                    </div>
-                </div>
-                <div id="y_comment" style="margin-top:30px;">
-                    <div class="y_comment">
-                        <div class="y_comment-head">
-                            <ul class="pagination">
-                                <li class="page-item pagination-sm"><a class="page-link" href="#"
-                                        style="color:white;background-color:#ee1c1b">Previous</a></li>
-                                <li class="page-item active pagination-sm"><a class="page-link" href="#"
-                                        style="color:white;background-color:#ee1c1b">1</a></li>
-                                <li class="page-item pagination-sm"><a class="page-link" href="#"
-                                        style="color:white;background-color:#ee1c1b">2</a></li>
-                                <li class="page-item pagination-sm"><a class="page-link" href="#"
-                                        style="color:white;background-color:#ee1c1b">3</a></li>
-                                <li class="page-item pagination-sm"><a class="page-link" href="#"
-                                        style="color:white;background-color:#ee1c1b">Next</a></li>
-                            </ul>
+        <div class="y_body">
+                <div class="y_body-view">
+                    <div class="y_body-l">
+                        <div class="y_view-report">
+                            <div class="y_video-title">
+                                <span class="y_title">title</span>
+                            </div>
+                            <!-- <div class="y_video-date">
+                                <span class="y_date">date</span>
+                            </div> -->
                         </div>
-                        <div class="y_comment-send">
-                                <div class="form-group" style="width:800px;float: left;line-height: 0px;">
-                                  <textarea class="form-control" rows="3" id="comment"></textarea>
+                        <div class="y_video">
+                            <div id="dplayer"></div>
+                        </div>
+                        <div class="y_video-summary">
+                            <div class="y_summary-info">
+                                summary
+                            </div>
+                        </div>
+                        <!-- <div id="y_comment" style="margin-top:30px;">
+                            <div class="y_comment">
+                                <div class="y_comment-head">
+                                    <ul class="pagination">
+                                        <li class="page-item pagination-sm"><a class="page-link" href="#"
+                                                style="color:white;background-color:#ee1c1b">上一页</a></li>
+                                        <li class="page-item active pagination-sm"><a class="page-link" href="#"
+                                                style="color:white;background-color:#ee1c1b">1</a></li>
+                                        <li class="page-item pagination-sm"><a class="page-link" href="#"
+                                                style="color:white;background-color:#ee1c1b">2</a></li>
+                                        <li class="page-item pagination-sm"><a class="page-link" href="#"
+                                                style="color:white;background-color:#ee1c1b">3</a></li>
+                                        <li class="page-item pagination-sm"><a class="page-link" href="#"
+                                                style="color:white;background-color:#ee1c1b">下一页</a></li>
+                                    </ul>
                                 </div>
-                                <input type="submit" class="btn btn-info" value="提交按钮">
+                                <div class="y_comment-send">
+                                    <div class="form-group" style="width:800px;float: left;line-height: 0px;">
+                                        <textarea class="form-control" rows="3" id="comment"></textarea>
+                                    </div>
+                                    <input type="submit" class="btn btn-info" value="提交按钮">
+                                </div>
+                            </div>
+                        </div> -->
+    
+    
+                    </div>
+                    <div class="y_body-r">
+                        <div class="d-flex flex-row  mb-3" style="height:80px;">
+                            <div class="y_u-face"style="width:48px;"><img style="width:48px;height:48px;" src="../img/video_up_face.png">
+                            </div>
+                            <div class="y_u-info">
+                                <div class="y_u-name" style="color:#a83f3f">biaopiao</div>
+                                <div class="y_u-desc" style="color:#b4b2b2">ye lai la</div>
+                            </div>
+                        </div>
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- 指示符 -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+        
+                            <!-- 轮播图片 -->
+                            <div class="carousel-inner" style="height:300px">
+                                <div class="carousel-item active">
+                                    <img src="../img/video_1.jpg">
+                                    <div class="carousel-caption">
+      
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/video_2.jpg">
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/video_3.jpg">
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--carousel-inner-->
+        
+                            <!-- 左右切换按钮 -->
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+        
                         </div>
                     </div>
                 </div>
-
-
             </div>
-            <div class="y_body-r"></div>
         </div>
     </div>
+   
 
 
 
@@ -100,6 +155,11 @@
 
 
 
+
+
+
+
+    <script src="../popper-1.15.0-dist/popper.min.js"></script>
     <script src="../DPlayer-dist/DPlayer.min.js"></script>
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../bootstrap-4.1.3-dist/js/bootstrap.js"></script>
@@ -109,7 +169,7 @@
         const dp = new DPlayer({
             container: document.getElementById('dplayer'),
             video: {
-                url: '../test_resources/1.mp4'
+                url: '../test_resources/2.mp4'
             },
             // danmaku: {
             //     id: 'testvideo2',
@@ -117,6 +177,27 @@
 
             // },
         });
+
+
+
+
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            console.log(121);
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // 点击按钮，返回顶部
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
 
     </script>
