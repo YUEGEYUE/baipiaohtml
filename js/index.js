@@ -1,8 +1,10 @@
+
 $(document).ready(function () {
-    $("#tt1").mouseenter(function () {
-        $("#tt1").click();
-        // console.location.href='video.html';
-        // $(".test").hide(3000);
+    $("#vcard").mouseenter(function () {
+        $("#vcard").click(function(){
+            location.href='./vid/video.html';
+        });
+        
 
     });
 });
