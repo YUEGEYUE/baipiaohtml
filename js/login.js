@@ -103,6 +103,13 @@ $(document).ready(function () {
                 },
                 dataType: "json",
                 success: function (response) {
+                    console.log(response);
+                    CMAP.set("userId",response.data.userId);
+                    CMAP.set("userPic",response.data.userPic);
+                    CMAP.set("userName",response.data.userName);
+                    CMAP.set("userEmail",response.data.userEmail);
+                    saveCmap();
+                    location.href='./../index.html';
                     alert('注册成功');
                 },
                 error(re){

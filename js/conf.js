@@ -22,3 +22,7 @@ function getCmap() {
 function saveCmap() {
     $.cookie('CMAP', JSON.stringify([...CMAP]), { expires: 7, path: '/' });
 }
+
+function removeCmap(){
+    $.removeCookie('CMAP',{ path: '/'});
+}
