@@ -64,7 +64,7 @@ $(document).ready(function () {
                         }
                     );
 
-                    $.post("172.16.56.161:10009/audit_video_api/video_volume_add.php", 
+                    $.post("http://172.16.56.161:10009/audit_video_api/video_volume_add.php", 
                         {
                             requirement:'commentVolume'
                         },
