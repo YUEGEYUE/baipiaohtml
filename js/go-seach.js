@@ -31,7 +31,7 @@ $(document).ready(function () {
         if ($("#yfm_seainput").val() == "") {
             alert("请输入搜索词");
         } else {
-            getserchdata();
+            getserchdata($("#yfm_seainput").val());
         }
 
 
