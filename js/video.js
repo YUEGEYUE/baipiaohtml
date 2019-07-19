@@ -59,12 +59,13 @@ $(document).ready(function () {
         // console.log(dp.video.currentTime);
 
         var d = new Date();
-        var hisda = Array(
+        var hiske=$("#y_summary-info").text();
+        var hisva = Array(
             GetQueryString("vid"),
             dp.video.currentTime,
             d.toLocaleDateString() + " " + d.toLocaleTimeString()
         );
-        HISTORY_VIEW.set($("#y_summary-info").text(),hisda);
+        HISTORY_VIEW.set(hiske,hisda);
         saveHISTORY_VIEW();
     });
     dp.on('danmaku_send', function () {
