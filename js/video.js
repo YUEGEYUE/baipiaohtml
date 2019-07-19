@@ -33,7 +33,21 @@ $(document).ready(function () {
 
 
 function getcom(){
-
+    $.ajax({
+        type: "post",
+        url: SERVERCOM+"/api/v1/comments",
+        data: {videoId:GetQueryString("vid")},
+        dataType: "json",
+        success: function (response) {
+            if(response.data.length>0){
+                for(var i=0;i<response.data.length;i++)
+                    $("#lbf_comshomw").append(comui(response.data[0]));
+            }else{
+                $("#lbf_comshomw").append("<span>没有评论</span>");
+            }
+            
+        }
+    });
 }
 
 function comui(da){
@@ -41,8 +55,8 @@ function comui(da){
     "<div class='card bg-light text-dark'>"+
         "<div class='card-body'>"+
             "<blockquote class='blockquote'>"+
-                "<p></p>"+
-                "<footer class='blockquote-footer'></footer>"+
+                "<p>"+da.comment+"</p>"+
+                "<footer class='blockquote-footer'>"+da.userId+"</footer>"+
             "</blockquote>"+
         "</div>"+
     "</div>";
