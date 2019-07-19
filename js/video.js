@@ -32,8 +32,9 @@ $(document).ready(function () {
             getcom();
         }
     });
-    HISTORY_VIEW = getHISTORY_VIEW();
-    if (HISTORY_VIEW != null) {
+    
+    if (getHISTORY_VIEW() != null) {
+        HISTORY_VIEW =getHISTORY_VIEW();
         HISTORY_VIEW.forEach(function (k, v) {
             if (v[0] == GetQueryString("vid")) {
                 dp.seek(v[1]);
