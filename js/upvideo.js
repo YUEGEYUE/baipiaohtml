@@ -1,5 +1,6 @@
 // 林倍锋
 $(document).ready(function () {
+    $("lbf-progress").hide();
     CMAP = getCmap();
     if(CMAP==null){
         alert('请先登录');
@@ -47,18 +48,20 @@ $(document).ready(function () {
             ||$("#videoUrl").val()==""
             ||$("#videoPic").val()==""
             ||$("#videoType").val()==""
-            ||$("#videoIntroduction").text()==""
+            ||$("#videoIntroduction").val()==""
             ){
 
         }else{
-            alert(CMAP.get('userId'));
+            // alert(CMAP.get('userId'));
             var formData = new FormData();
 			formData.append("videoUrl", $("#videoUrl")[0].files[0]);
 			formData.append("videoPic", $("#videoPic")[0].files[0]);
 			formData.append("videoTitle", $("#videoTitle").val());
 			formData.append("videoType", $("#videoType").val());
-			formData.append("videoIntroduction", $("#videoIntroduction").text());
-			formData.append("userId", CMAP.get('userId'));
+			formData.append("videoIntroduction", $("#videoIntroduction").val());
+            formData.append("userId", CMAP.get('userId'));
+            $("#selectca").attr("disabled", "disabled");
+            $("#lbf-progress").show(1000);
 			$.ajax({
 				url: SERVERCOM+'/api/v1/video',
 				type: 'post',
@@ -76,14 +79,15 @@ $(document).ready(function () {
 							var total = e.total;                      //附件总大小 
 							var percent = Math.floor(100 * loaded / total) + "%";     //已经上传的百分比  
 							console.log("已经上传了：" + percent);
-							$("#processBar").css("width", percent);
+							$("#lbf-re-pro").css("width", percent);
 						}, false); // for handling the progress of the upload
 					}
 					return myXhr;
 				},
 				error:function(e){
                     console.log(e.responseText);
-                    
+                    $("#selectca").attr("disabled", "enabled");
+                    location.reload();
                 },
                 
 				success: function (res) {
