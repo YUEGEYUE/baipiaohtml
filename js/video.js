@@ -66,7 +66,7 @@ $(document).ready(function () {
             dp.video.currentTime,
             d.toLocaleDateString() + " " + d.toLocaleTimeString()
         );
-        HISTORY_VIEW.set(hiske,hisda);
+        HISTORY_VIEW.set(hiske,hisva);
         saveHISTORY_VIEW();
     });
     dp.on('danmaku_send', function () {
