@@ -61,6 +61,7 @@ function comui(da){
             "</blockquote>"+
         "</div>"+
     "</div>";
+    return t;
 }
 
 
