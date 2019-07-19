@@ -33,6 +33,28 @@ $(document).ready(function () {
     });
 
 
+    dp.on('play', function () {
+        $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
+            {
+                requirement: 'playVolume',
+                videoId: GetQueryString("vid")
+            },
+            function (data, textStatus, jqXHR) {
+                // alert("发送成功");
+            },
+        );
+    });
+    dp.on('danmaku_send', function () {
+        $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
+            {
+                requirement: 'danmukeVolume',
+                videoId: GetQueryString("vid")
+            },
+            function (data, textStatus, jqXHR) {
+                alert("弹幕发送成功");
+            },
+        );
+    });
 
     $('#lbf_sendcombut').click(function () {
         // e.preventDefault();
