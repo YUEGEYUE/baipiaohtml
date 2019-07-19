@@ -17,6 +17,8 @@ $(document).ready(function () {
         dataType: "json",
         success: function (response) {
             //  alert(response[0].videoUrl);
+            $("#y_title").text(response[0].videoTitle);
+            $("#y_summary-info").text(response[0].videoIntroduction);
             dp.switchVideo({
                 url:SERVERCOM+"/"+response[0].videoUrl,
                 pic:SERVERCOM+"/"+response[0].videoPic
