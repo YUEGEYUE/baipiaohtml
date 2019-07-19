@@ -27,6 +27,7 @@ $(document).ready(function () {
                 id: ''+response[0].videoId,
                 api:DANMUKEURL,
             });
+            getcom();
         }
     });
 });
