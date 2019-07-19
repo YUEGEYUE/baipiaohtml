@@ -23,6 +23,7 @@ $(document).ready(function () {
     $("#userPicbut").click(function (e) { 
         var formData=new FormData();
         formData.append('userPic',$("#userPic")[0].files[0]);
+        formData.append('userId',CMAP.get('userId'));
         $(this).attr("disabled","disabled");
         $("#userPic").attr("disabled","disabled");
         $.ajax({
