@@ -6,6 +6,13 @@ $(document).ready(function () {
     }else{
         $("#lbf-ed-pic").attr("src", CMAP.get('userPic'));
     }
+
+
+    $("#userPic").change(function () { 
+        $("#lbf-ed-pic").attr("src",$("#userPic")[0].files[0]);
+
+        
+    });
     $("#userPicbut").click(function (e) { 
         var formData=new FormData();
         formData.append('userPic',$("#userPic")[0].files[0]);
