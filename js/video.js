@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "post",
-        url: SERVERCOM2+"/audit_video_api/video_info_id.php",
+        url: SERVERCOM2 + "/audit_video_api/video_info_id.php",
         data: { videoId: GetQueryString("vid") },
         dataType: "json",
         success: function (response) {
@@ -59,16 +59,18 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     $("#lbf_comshomw").children("span").remove();
-                    comui(
-                        {
-                            comment: $("#lbf_comment").val(),
-                            userId: CMAP.get('userId')
-                        }
-                    );
+                    $("#lbf_comshomw").append(
+                        comui(
+                            {
+                                comment: $("#lbf_comment").val(),
+                                userId: CMAP.get('userId')
+                            }
+                        ));
 
-                    $.post( SERVERCOM2+"/audit_video_api/video_volume_add.php",
+                    $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
                         {
-                            requirement: 'commentVolume'
+                            requirement: 'commentVolume',
+                            videoId: GetQueryString("vid")
                         },
                         function (data, textStatus, jqXHR) {
                             alert("发送成功");
