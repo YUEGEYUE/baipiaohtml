@@ -1,5 +1,5 @@
 var SERVERCOM = 'http://172.16.56.161:10007';
-var DANMUKEURL = 'http://172.16.56.161:1207';
+var DANMUKEURL = 'http://172.16.56.161:1207/';
 var THISROOT='http://172.16.56.161:10008';
 var CMAP = new Map();
 // {

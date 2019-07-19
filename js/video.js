@@ -1,6 +1,13 @@
 
 $(document).ready(function () {
-    const dp = new DPlayer({container: document.getElementById('dplayer')});
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        video:{},
+        danmaku:{
+            id: 'notest',
+            api:DANMUKEURL,
+        }
+    });
     
 
     $.ajax({
@@ -9,13 +16,14 @@ $(document).ready(function () {
         data: {videoId:GetQueryString("vid")},
         dataType: "json",
         success: function (response) {
-            alert(response);
-            // dp.switchVideo({
-            //     url:response.videoUrl,
-            //     pic:response.videoUrlPic
-            // },{
-            //     id:response.id
-            // });
+            //  alert(response[0].videoUrl);
+            dp.switchVideo({
+                url:SERVERCOM+"/"+response[0].videoUrl,
+                pic:SERVERCOM+"/"+response[0].videoPic
+            },{
+                id: ''+response[0].videoId,
+                api:DANMUKEURL,
+            });
         }
     });
 });
