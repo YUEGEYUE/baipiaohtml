@@ -1,6 +1,6 @@
 // 林倍锋
 $(document).ready(function () {
-    $("lbf-progress").hide();
+    $("#lbf-progress").hide();
     CMAP = getCmap();
     if(CMAP==null){
         alert('请先登录');
