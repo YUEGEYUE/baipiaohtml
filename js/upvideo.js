@@ -60,7 +60,7 @@ $(document).ready(function () {
 			formData.append("videoType", $("#videoType").val());
 			formData.append("videoIntroduction", $("#videoIntroduction").val());
             formData.append("userId", CMAP.get('userId'));
-            $("#selectca").attr("disabled", "disabled");
+            $("#selectca").children().attr("disabled", "disabled");
             $("#lbf-progress").show(1000);
 			$.ajax({
 				url: SERVERCOM+'/api/v1/video',
@@ -92,7 +92,7 @@ $(document).ready(function () {
 				success: function (res) {
                     console.log(res.data);
                     alert("上传成功");
-                    $("#selectca").attr("disabled", "enabled");
+                    $("#selectca").children().attr("disabled", "enabled");
                     location.reload();
 				}
 			})
