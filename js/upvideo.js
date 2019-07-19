@@ -61,7 +61,7 @@ $(document).ready(function () {
 			formData.append("videoIntroduction", $("#videoIntroduction").val());
             formData.append("userId", CMAP.get('userId'));
             $("#selectca").children().attr("disabled", "disabled");
-            $("#lbf-progress").show(1000);
+            $("#lbf-progress").show(200);
 			$.ajax({
 				url: SERVERCOM+'/api/v1/video',
 				type: 'post',
