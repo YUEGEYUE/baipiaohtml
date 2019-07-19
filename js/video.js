@@ -5,9 +5,9 @@ $(document).ready(function () {
 
     $.ajax({
         type: "post",
-        url: "http:/172.16.56.161:10009/audit_video_api/video_info_id.php",
+        url: "http://172.16.56.161:10009/audit_video_api/video_info_id.php",
         data: {videoId:GetQueryString("vid")},
-        dataType: "dataType",
+        dataType: "json",
         success: function (response) {
             alert(JSON.parse(response));
             // dp.switchVideo({
