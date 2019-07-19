@@ -48,6 +48,13 @@ $(document).ready(function () {
             lockst=1;
         }
     });
+    dp.on('playing', function () {
+        console.log(dp.video.currentTime);
+        
+        // var d=new Date();
+        // HISTORY_VIEW.set($("#y_summary-info").val(),Array(
+        //     GetQueryString("vid"),dp.));
+    });
     dp.on('danmaku_send', function () {
         $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
             {

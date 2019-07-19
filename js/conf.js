@@ -3,15 +3,25 @@ var SERVERCOM2 = 'http://192.168.221.130:10009';
 var DANMUKEURL = 'http://192.168.221.130:1207/';
 var THISROOT='http://192.168.221.130:10008';
 var CMAP = new Map();
-// {
-//     "userId": 3,
-//     "userPic": "http://localhost/BaiPiao-PHP/",
-//     "userName": "lbf",
-//     "userPassword": "25f9e794323b453885f5181f1b624d0b",
-//     "userEmail": "lbf@qq.com"
-// }
+
+/**
+ * HISTORY_VIEW 播放记录
+ * key 为视频标题 value为数组[videoId,seekse,2019/7/19 下午10:02:51] 
+ */
+var HISTORY_VIEW= new Map();
+
 function getCmap() {
     var coo = $.cookie('CMAP');
+    if (coo == null)
+        return null;
+    else {
+        var cooe = JSON.parse(coo);
+        var gm = new Map(cooe);
+        return gm;
+    }
+}
+function getHISTORY_VIEW(){
+    var coo = $.cookie('HISTORY_VIEW');
     if (coo == null)
         return null;
     else {
@@ -23,10 +33,18 @@ function getCmap() {
 function saveCmap() {
     $.cookie('CMAP', JSON.stringify([...CMAP]), { expires: 7, path: '/' });
 }
+function saveHISTORY_VIEW(){
+    $.cookie('HISTORY_VIEW', JSON.stringify([...HISTORY_VIEW]), { expires: 7, path: '/' });
+}
+
 
 function removeCmap(){
     $.removeCookie('CMAP',{ path: '/'});
 }
+function removeHISTORY_VIEW(){
+    $.removeCookie('HISTORY_VIEW',{ path: '/'});
+}
+
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
 
