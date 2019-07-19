@@ -1,49 +1,33 @@
+
+function getserchdata(kw) {
+    alert(kw);
+    var da;
+    // var fo=new FormData();
+    // fo.append('videoTitle',kw);
+    $.ajax({
+        type: "post",
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoTitle: kw },
+        dataType: "json",
+        success: function (response) {
+            alert("response.data.length:"+response.data.length);
+            if (response.data.length > 0) {
+                for (var i = 0; i < response.data.length; i++) {
+                    $("#lbf-sea-vcard").append(setc(response.data[i]));
+                    
+                }
+            } else {
+                da = null;
+            }
+
+        }
+    });
+    return da;
+}
+
 $(document).ready(function () {
-    // <p id="vcard"></p>
-
-    var j = JSON.parse('{ "playVolume":"100", "commentVolume":10000, "videoTitle":"白漂测试","videoPic":"./../img/9.PNG" }');
-    for (var i = 0; i < 24; i++) {
-
-        $("#vcard").append(setc(j));
-
-
-    }
-
-
-    // function setc(data){
-    //     var c ="<div "+ 'class='+'"card ghy_card_size ghy_noborder"'+">"+
-    //     "<div "+ 'class='+'"card-body ghy_nopadding"'+">"+
-    //     "<div "+ 'class='+'"card img-fluid ghy_noborder"'+">"+
-    //     "<img "+ 'class='+'"ghy_card_size"'+'src='+data.videoPic
-    //     +" alt"+'='+data.videoTitle+">"+
-    //     "<div "+ 'class='+'"card-img-overlay ghy_text_overflow ghy_color"'+">"+
-    //     "<i "+ 'class='+'"fa fa-play-circle fa-lg"'+">"+"</i>"+"："+data.playVolume+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
-    //     "<i "+ 'class='+'"fa fa-list-alt fa-lg"'+">"+"</i>"+"："+data.commentVolume+"</br>"+
-    //     data.videoTitle+
-    //     "</div>"+
-    //     "</div>"+
-    //     "</div>"+
-    //     "</div>";
-    //     return c;
-    // }
-    function setc(da) {
-        var d =
-
-            "<div class='d-flex flex-wrap bg-light col-md-3'>" +
-            "<div class='card'>" +
-            "<img class='ghy_card_size' src='./../img/9.PNG' style='width:100% ' alt=da.videoTitle>" +
-            "<div class='card-img-overlay ghy_text_ovejrflow ghy_color'>" +
-            "<i class='fa fa-play-circle fa-lg' style='margin-top:120px;'></i>" + ':' + da.playVolume + '&nbsp;&nbsp;&nbsp;&nbsp;' +
-            "<i class='fa fa-list-alt fa-lg' style='margin-top:120px;'> </i>" + ':' + da.commentVolume + '</br>' + da.videoTitle +
-            "</div>" +
-
-            "</div>" +
-            "</div>";
-
-        return d;
-
-    }
-
+    // alert(GetQueryString("keyword"));
+    getserchdata(GetQueryString("keyword"));
 });
 
 // yfm

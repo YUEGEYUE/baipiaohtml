@@ -97,10 +97,11 @@
 			<!--菜单栏-->
 			<div class="lgl_menu">
 				<div class="lgl_menu_left">
-					<a href="#donghua">动画&nbsp;|</a>
-					<a href="#youxi">游戏&nbsp;|</a>
+					<a href="#donghua">电视剧&nbsp;|</a>
+					<a href="#youxi">电影&nbsp;|</a>
 					<a href="#dongman">动漫&nbsp;|</a>
-					<a href="#jilupian">纪录片</a>
+					<a href="#dongman">MV&nbsp;|</a>
+					<a href="#guangao">广告</a>
 				</div>
 				<form action="./loge/go-seach.html" method="post">
 					<div class="lgl_menu_right">
@@ -109,8 +110,7 @@
 							<input type="text" class="form-control" id="search" name="search">
 							<!--输入框-->
 							<span class="input-group-btn">
-								<button class="btn btn-default" type="button"
-									onclick="window.location.href='./loge/go-seach.html'">
+								<button class="btn btn-default" type="button" id="lbf-secbut">
 									<i class="fa fa-search fa-lg"></i></button>
 								<!--搜索按钮-->
 							</span>
@@ -126,7 +126,7 @@
 						<div class="lgl_partition_head_left_icon">
 							<img src="./img/国产动画.png" />
 						</div>
-						<label><a href="loge/donghua.html">动画</a></label>
+						<label><a href="./loge/fengqu.html?type=tv">电视剧</a></label>
 					</div>
 					<div class="lgl_partition_head_right">
 						<button onclick="window.location.href='./loge/donghua.html'"><img
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 				<div>
-					<div class="lgl_partition_video vcard" id="vcard">
+					<div class="lgl_partition_video vcard" id="tv-vcard">
 						
 					</div>
 				</div>
@@ -145,14 +145,14 @@
 						<div class="lgl_partition_head_left_icon">
 							<img src="./img/游戏.png" />
 						</div>
-						<label><a href="loge/youxi.html">游戏</a></label>
+						<label><a href="./loge/fengqu.html?type=film">电影</a></label>
 					</div>
 					<div class="lgl_partition_head_right">
 						<button onclick="window.location.href='./loge/youxi.html'"><img
 								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
-				<div class="lgl_partition_video vcard">
+				<div class="lgl_partition_video vcard" id="film-vcard">
 
 				</div>
 			</div>
@@ -162,14 +162,14 @@
 						<div class="lgl_partition_head_left_icon">
 							<img src="img/动漫.png" />
 						</div>
-						<label><a href="loge/dongman.html">动漫</a></label>
+						<label><a href="./loge/fengqu.html?type=anime">动漫</a></label>
 					</div>
 					<div class="lgl_partition_head_right">
 						<button onclick="window.location.href='./loge/dongman.html'"><img
 								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
-				<div class="lgl_partition_video vcard">
+				<div class="lgl_partition_video vcard" id="anime-vcard">
 				</div>
 			</div>
 			<div class="lgl_partition" id="jilupian">
@@ -178,14 +178,31 @@
 						<div class="lgl_partition_head_left_icon">
 							<img src="img/录像.png" />
 						</div>
-						<label><a href="loge/jilupian.html">纪录片</a></label>
+						<label><a href="./loge/fengqu.html?type=mv">MV</a></label>
 					</div>
 					<div class="lgl_partition_head_right">
 						<button onclick="window.location.href='./loge/jilupian.html'"><img
 								src="./img/more_circle.png" /></button>
 					</div>
 				</div>
-				<div class="lgl_partition_video vcard">
+				<div class="lgl_partition_video vcard" id="mv-vcard">
+
+				</div>
+			</div>
+			<div class="lgl_partition" id="guangao">
+				<div class="lgl_partition_head">
+					<div class="lgl_partition_head_left">
+						<div class="lgl_partition_head_left_icon">
+							<img src="img/录像.png" />
+						</div>
+						<label><a href="./loge/fengqu.html?type=ad">广告</a></label>
+					</div>
+					<div class="lgl_partition_head_right">
+						<button onclick="window.location.href='./loge/jilupian.html'"><img
+								src="./img/more_circle.png" /></button>
+					</div>
+				</div>
+				<div class="lgl_partition_video vcard" id="ad-vcard">
 
 				</div>
 			</div>
