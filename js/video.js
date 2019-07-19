@@ -9,7 +9,7 @@ $(document).ready(function () {
         data: {videoId:GetQueryString("vid")},
         dataType: "json",
         success: function (response) {
-            alert(JSON.parse(response));
+            alert(response);
             // dp.switchVideo({
             //     url:response.videoUrl,
             //     pic:response.videoUrlPic
