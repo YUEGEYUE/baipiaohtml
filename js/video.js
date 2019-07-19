@@ -32,7 +32,21 @@ $(document).ready(function () {
 });
 
 
+function getcom(){
 
+}
+
+function comui(da){
+    var t=
+    "<div class='card bg-light text-dark'>"+
+        "<div class='card-body'>"+
+            "<blockquote class='blockquote'>"+
+                "<p></p>"+
+                "<footer class='blockquote-footer'></footer>"+
+            "</blockquote>"+
+        "</div>"+
+    "</div>";
+}
 
 
 
