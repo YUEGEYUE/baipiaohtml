@@ -48,7 +48,7 @@ $(document).ready(function () {
             lockst=1;
         }
     });
-    dp.on('playing', function () {
+    dp.on('progress', function () {
         console.log(dp.video.currentTime);
         
         // var d=new Date();
