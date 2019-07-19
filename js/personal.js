@@ -9,8 +9,15 @@ $(document).ready(function () {
 
 
     $("#userPic").change(function () { 
-        $("#lbf-ed-pic").attr("src",$("#userPic")[0].files[0]);
-
+        // $("#lbf-ed-pic").attr("src",$("#userPic")[0].files[0]);
+        var files = this.files;
+        var file = files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+            var urlsrc = this.result;
+            $("#lbf-ed-pic").attr('src', urlsrc);
+        }
         
     });
     $("#userPicbut").click(function (e) { 
