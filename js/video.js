@@ -32,13 +32,13 @@ $(document).ready(function () {
             getcom();
         }
     });
-    HISTORY_VIEW=getHISTORY_VIEW();
-    if(HISTORY_VIEW!=null){
-        HISTORY_VIEW.forEach(function(k,v){
-            if(v[0]==GetQueryString("vid")){
+    HISTORY_VIEW = getHISTORY_VIEW();
+    if (HISTORY_VIEW != null) {
+        HISTORY_VIEW.forEach(function (k, v) {
+            if (v[0] == GetQueryString("vid")) {
                 dp.seek(v[1]);
             }
-        },HISTORY_VIEW);
+        }, HISTORY_VIEW);
     }
 
     dp.on('play', function () {
@@ -52,16 +52,20 @@ $(document).ready(function () {
                     // alert("发送成功");
                 },
             );
-            lockst=1;
+            lockst = 1;
         }
     });
     dp.on('progress', function () {
         // console.log(dp.video.currentTime);
-        
-        var d=new Date();
-        HISTORY_VIEW.set($("#y_summary-info").val(),Array(
-            GetQueryString("vid"),dp.video.currentTime,d.toLocaleDateString()+" "+d.toLocaleTimeString()));
-        saveHISTORY_VIEW();    
+
+        var d = new Date();
+        var hisda = Array(
+            GetQueryString("vid"),
+            dp.video.currentTime,
+            d.toLocaleDateString() + " " + d.toLocaleTimeString()
+        );
+        HISTORY_VIEW.set($("#y_summary-info").text(),hisda);
+        saveHISTORY_VIEW();
     });
     dp.on('danmaku_send', function () {
         $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
