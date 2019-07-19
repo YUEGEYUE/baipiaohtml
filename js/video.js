@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    var lockst = 0;
     CMAP = getCmap();
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),
@@ -34,15 +35,18 @@ $(document).ready(function () {
 
 
     dp.on('play', function () {
-        $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
-            {
-                requirement: 'playVolume',
-                videoId: GetQueryString("vid")
-            },
-            function (data, textStatus, jqXHR) {
-                // alert("发送成功");
-            },
-        );
+        if (lockst == 0) {
+            $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
+                {
+                    requirement: 'playVolume',
+                    videoId: GetQueryString("vid")
+                },
+                function (data, textStatus, jqXHR) {
+                    // alert("发送成功");
+                },
+            );
+            lockst=1;
+        }
     });
     dp.on('danmaku_send', function () {
         $.post(SERVERCOM2 + "/audit_video_api/video_volume_add.php",
