@@ -86,13 +86,14 @@ $(document).ready(function () {
 				},
 				error:function(e){
                     console.log(e.responseText);
-                    $("#selectca").attr("disabled", "enabled");
-                    location.reload();
+                    
                 },
                 
 				success: function (res) {
-					console.log(res.data);
-
+                    console.log(res.data);
+                    alert("上传成功");
+                    $("#selectca").attr("disabled", "enabled");
+                    location.reload();
 				}
 			})
         }
