@@ -34,6 +34,8 @@ function saveCmap() {
     $.cookie('CMAP', JSON.stringify([...CMAP]), { expires: 7, path: '/' });
 }
 function saveHISTORY_VIEW(){
+    console.log("save history");
+    
     $.cookie('HISTORY_VIEW', JSON.stringify([...HISTORY_VIEW]), { expires: 7, path: '/' });
 }
 
