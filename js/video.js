@@ -30,6 +30,52 @@ $(document).ready(function () {
             getcom();
         }
     });
+
+
+
+    $('#lbf_sendcombut').click(function () {
+        // e.preventDefault();
+        if($("#lbf_comment").val()==""){
+            alert('填写评论');
+            return false;
+        }else if(CMAP==null){
+            alert('登录评论');
+            location.href="./../loge/login.html";
+            return false;
+        }else {
+            $.ajax({
+                type: "post",
+                url: SERVERCOM+'/api/v1/comment',
+                data: {
+                    userId:CMAP.get('userId'),
+                    videoId:GetQueryString("vid"),
+                    comment:$("#lbf_comment").val()
+                },
+                dataType: "json",
+                error:function(re){
+                    alert('发送失败');
+                },
+                success: function (response) {
+                    $("#lbf_comshomw").children("span").remove();
+                    comui(
+                        {
+                            comment:$("#lbf_comment").val(),
+                            userId:CMAP.get('userId')
+                        }
+                    );
+
+                    $.post("172.16.56.161:10009/audit_video_api/video_volume_add.php", 
+                        {
+                            requirement:'commentVolume'
+                        },
+                        function (data, textStatus, jqXHR) {
+                            alert("发送成功");
+                        },
+                    );
+                }
+            });
+        }
+    });
 });
 
 
