@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    CMAP = getCmap();
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),
         video: {},
@@ -13,7 +14,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "post",
-        url: "http://172.16.56.161:10009/audit_video_api/video_info_id.php",
+        url: SERVERCOM2+"/audit_video_api/video_info_id.php",
         data: { videoId: GetQueryString("vid") },
         dataType: "json",
         success: function (response) {
@@ -35,38 +36,39 @@ $(document).ready(function () {
 
     $('#lbf_sendcombut').click(function () {
         // e.preventDefault();
-        if($("#lbf_comment").val()==""){
+        if (CMAP == null) {
+            alert('请登录评论');
+            location.href = "./../loge/login.html";
+            return false;
+        }
+        if ($("#lbf_comment").val() == "") {
             alert('填写评论');
             return false;
-        }else if(CMAP==null){
-            alert('登录评论');
-            location.href="./../loge/login.html";
-            return false;
-        }else {
+        } else {
             $.ajax({
                 type: "post",
-                url: SERVERCOM+'/api/v1/comment',
+                url: SERVERCOM + '/api/v1/comment',
                 data: {
-                    userId:CMAP.get('userId'),
-                    videoId:GetQueryString("vid"),
-                    comment:$("#lbf_comment").val()
+                    userId: CMAP.get('userId'),
+                    videoId: GetQueryString("vid"),
+                    comment: $("#lbf_comment").val()
                 },
                 dataType: "json",
-                error:function(re){
+                error: function (re) {
                     alert('发送失败');
                 },
                 success: function (response) {
                     $("#lbf_comshomw").children("span").remove();
                     comui(
                         {
-                            comment:$("#lbf_comment").val(),
-                            userId:CMAP.get('userId')
+                            comment: $("#lbf_comment").val(),
+                            userId: CMAP.get('userId')
                         }
                     );
 
-                    $.post("http://172.16.56.161:10009/audit_video_api/video_volume_add.php", 
+                    $.post( SERVERCOM2+"/audit_video_api/video_volume_add.php",
                         {
-                            requirement:'commentVolume'
+                            requirement: 'commentVolume'
                         },
                         function (data, textStatus, jqXHR) {
                             alert("发送成功");
