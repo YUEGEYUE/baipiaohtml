@@ -95,7 +95,7 @@ $(document).ready(function () {
                     $("#selectca").children().attr("disabled", "enabled");
                     location.reload();
 				}
-			})
+			});
         }
     });
 });
