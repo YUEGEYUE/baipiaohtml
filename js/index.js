@@ -100,13 +100,10 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover({
         // trigger:'hover',
         html:true,
-        content:getpoo()
+        content:$("#lbf_popom").text()
     });
     
-    function getpoo(){
-        var t=$("#lbf_popom").html()
-        return t;
-    }
+
     $('#lbf-exit-but').click(function () { 
         removeCmap();
         location.reload();
