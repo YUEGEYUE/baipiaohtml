@@ -95,6 +95,7 @@ $(document).ready(function () {
     animeshow();
     mvshow();
     adshow();
+    getnotification();
     $('[data-toggle="popover"]').popover({
         // trigger:'hover',
         html:true,
