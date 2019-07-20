@@ -1,7 +1,7 @@
-var SERVERCOM = 'http://192.168.221.130:10007';
-var SERVERCOM2 = 'http://192.168.221.130:10009';
-var DANMUKEURL = 'http://192.168.221.130:1207/';
-var THISROOT='http://192.168.221.130:10008';
+var SERVERCOM = 'http://172.16.56.161:10007';
+var SERVERCOM2 = 'http://172.16.56.161:10009';
+var DANMUKEURL = 'http://172.16.56.161:1207/';
+var THISROOT='http://172.16.56.161:10008';
 var CMAP = new Map();
 
 /**
