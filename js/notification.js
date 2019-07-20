@@ -1,5 +1,5 @@
 function getnotification() {
-    $.post("url",
+    $.post(SERVERCOM2+'/audit_video_api/notification_info_by_userid.php',
         { userId: CMAP.get('userId') },
         function (data, textStatus, jqXHR) {
             if (data != 'Error Respond') {
