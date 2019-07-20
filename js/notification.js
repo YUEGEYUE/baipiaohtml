@@ -18,8 +18,3 @@ function getnotification() {
         },
     );
 }
-$("#lbf_mess").popover({
-    // trigger:'hover',
-    html:true,
-    content:$("#lbf_popom").html()
-});

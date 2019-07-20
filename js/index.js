@@ -95,7 +95,11 @@ $(document).ready(function () {
     animeshow();
     mvshow();
     adshow();
-    
+    $('[data-toggle="popover"]').popover({
+        // trigger:'hover',
+        html:true,
+        content:$("#lbf_popom").html()
+    });
     
     $('#lbf-exit-but').click(function () { 
         removeCmap();
