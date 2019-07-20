@@ -7,6 +7,7 @@ $(document).ready(function () {
         $("#lbf-ed-pic").attr("src", CMAP.get('userPic'));
     }
 
+    sethis();
 
     $("#userPic").change(function () { 
         // $("#lbf-ed-pic").attr("src",$("#userPic")[0].files[0]);
@@ -52,4 +53,30 @@ $(document).ready(function () {
         
     });
    
+
+    function sethis(){
+        $("#lgl_recode").children().remove();
+        HISTORY_VIEW=getHISTORY_VIEW();
+        if(HISTORY_VIEW==null){
+            return false;
+        }else{
+            HISTORY_VIEW.forEach(function(value,key,map){
+                $("#lgl_recode").append(hiscard(key,value));
+            });
+        }
+    }
+    function hiscard(k,v){
+        var c=
+        "<div class='card bg-light text-dark'>"+
+            "<div class='card-body'>"+
+                "<div style='float:left; height:100px;' class='col-4'>"+
+                    "<img style=' max-height:100%;margin:auto;' src='"+v[1]+"'/>"+
+                "</div>"+
+                "<h3 class='col-4' style='float:left;'>"+k+"</h3>"+
+                "<span class='col-2' style='float:left;'>看到"+v[2]+"秒</span>"+
+                "<h5 class='col-2' style='float:left;'>"+v[3]+"</h5>"+
+            "</div>"+
+        "</div>";
+        return c;
+    }
 });

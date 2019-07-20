@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
     var lockst = 0;
+    var vidpic;
     CMAP = getCmap();
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),
@@ -22,6 +23,7 @@ $(document).ready(function () {
             //  alert(response[0].videoUrl);
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
+            vidpic=SERVERCOM + "/" + response[0].videoPic;
             dp.switchVideo({
                 url: SERVERCOM + "/" + response[0].videoUrl,
                 pic: SERVERCOM + "/" + response[0].videoPic
@@ -41,7 +43,7 @@ $(document).ready(function () {
 
             HISTORY_VIEW.forEach(function (value, key,map) {
                 if (value[0] == GetQueryString("vid")) {
-                    dp.seek(value[1]);
+                    dp.seek(value[2]);
                     
                 }
             });
@@ -71,6 +73,7 @@ $(document).ready(function () {
         var hiske = $("#y_summary-info").text();
         var hisva = Array(
             GetQueryString("vid"),
+            vidpic,
             dp.video.currentTime,
             d.toLocaleDateString() + " " + d.toLocaleTimeString()
         );

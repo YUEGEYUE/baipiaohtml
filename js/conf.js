@@ -6,7 +6,7 @@ var CMAP = new Map();
 
 /**
  * HISTORY_VIEW 播放记录
- * key 为视频标题 value为数组[videoId,seekse,2019/7/19 下午10:02:51] 
+ * key 为视频标题 value为数组[videoId,videoPic,seekse,2019/7/19 下午10:02:51] 
  */
 var HISTORY_VIEW= new Map();
 
