@@ -96,12 +96,7 @@ $(document).ready(function () {
     mvshow();
     adshow();
 
-    getnotification();
-    $('[data-toggle="popover"]').popover({
-        // trigger:'hover',
-        html:true,
-        content:$("#lbf_popom").text()
-    });
+    getnotification2id("");
     
 
     $('#lbf-exit-but').click(function () { 
