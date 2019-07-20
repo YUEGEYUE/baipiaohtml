@@ -101,6 +101,7 @@ $(document).ready(function () {
 
     $('#lbf-exit-but').click(function () { 
         removeCmap();
+        removeHISTORY_VIEW();
         location.reload();
     });
 
