@@ -80,7 +80,7 @@ $(document).ready(function () {
         return c;
     }
     $(document).on("click", ".hisc", function () {
-        location.href = "./vid/viode.html?vid=" + $(this).attr("vidid");
+        location.href = "./../vid/viode.html?vid=" + $(this).attr("vidid");
     });
 
     function getuserup(){
@@ -116,7 +116,7 @@ $(document).ready(function () {
     }
     $(document).on("click", ".lbf_upc", function () {
         if($(this).attr("vidsts")=='1')
-            location.href = "./vid/viode.html?vid=" + $(this).attr("vidid");
+            location.href = "./../vid/viode.html?vid=" + $(this).attr("vidid");
         else
             return false;
     });
