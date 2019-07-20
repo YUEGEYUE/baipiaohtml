@@ -42,7 +42,7 @@ $(document).ready(function () {
             HISTORY_VIEW.forEach(function (value, key,map) {
                 if (value[0] == GetQueryString("vid")) {
                     dp.seek(value[1]);
-                    break;
+                    
                 }
             });
         } else {
