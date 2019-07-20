@@ -30,16 +30,24 @@ $(document).ready(function () {
                     api: DANMUKEURL,
                 });
             getcom();
+            hisseek();
         }
     });
-    
-    if (getHISTORY_VIEW() != null) {
-        HISTORY_VIEW =getHISTORY_VIEW();
-        HISTORY_VIEW.forEach(function (k, v) {
-            if (v[0] == GetQueryString("vid")) {
-                dp.seek(v[1]);
-            }
-        }, HISTORY_VIEW);
+
+
+    function hisseek() {
+        HISTORY_VIEW = getHISTORY_VIEW();
+        if (HISTORY_VIEW != null) {
+
+            HISTORY_VIEW.forEach(function (k, v) {
+                if (v[0] == GetQueryString("vid")) {
+                    dp.seek(v[1]);
+                    break;
+                }
+            }, HISTORY_VIEW);
+        } else {
+            HISTORY_VIEW = new Map();
+        }
     }
 
     dp.on('play', function () {
@@ -60,13 +68,13 @@ $(document).ready(function () {
         // console.log(dp.video.currentTime);
 
         var d = new Date();
-        var hiske=$("#y_summary-info").text();
+        var hiske = $("#y_summary-info").text();
         var hisva = Array(
             GetQueryString("vid"),
             dp.video.currentTime,
             d.toLocaleDateString() + " " + d.toLocaleTimeString()
         );
-        HISTORY_VIEW.set(hiske,hisva);
+        HISTORY_VIEW.set(hiske, hisva);
         saveHISTORY_VIEW();
     });
     dp.on('danmaku_send', function () {
