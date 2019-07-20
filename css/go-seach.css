@@ -65,8 +65,8 @@ width:100%;
  }
  .yfm_title:hover{
     
-     -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
-     transform: rotateY(180deg);
+     -webkit-transform: rotateY(360deg); /* Chrome, Safari, Opera */
+     transform: rotateY(360deg);
  }
  .input-group{
  

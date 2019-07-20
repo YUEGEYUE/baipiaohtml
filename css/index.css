@@ -31,7 +31,7 @@ body{
 		height:48px;
 	}
 .lgl_header_right{
-	width:200px;
+	width:150px;
 	float:right;
 	padding:0px;
 	margin-top:7px;
@@ -160,7 +160,7 @@ img{
 	top:40%;
 	border:2px solid #d81e06;
 	width:60px;
-	height:204px;
+	height:230px;
 	right:10px;
 	background-color:#e5e9ef;
 
