@@ -112,7 +112,7 @@ img{
 .lgl_content .lgl_partition .lgl_partition_head{
 	padding:7px;
 	height:48px;
-	border:1px solid #d81e06;
+	border:0px solid #d81e06;
 }
 .lgl_content .lgl_partition .lgl_partition_head_left{
 	float:left;
@@ -149,7 +149,7 @@ img{
 }
 .lgl_content .lgl_partition .lgl_partition_video{
 	height:325px;
-	border:1px solid #d81e06;
+	border:0px solid #d81e06;
 	clear: both;
 	margin-bottom: 10px;
 	margin-top: 1px;
