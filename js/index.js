@@ -95,14 +95,18 @@ $(document).ready(function () {
     animeshow();
     mvshow();
     adshow();
+
+    getnotification();
     $('[data-toggle="popover"]').popover({
         // trigger:'hover',
         html:true,
-        content:$("#lbf_popom").html()
+        content:getpoo()
     });
-    getnotification();
-
     
+    function getpoo(){
+        var t=$("#lbf_popom").html()
+        return t;
+    }
     $('#lbf-exit-but').click(function () { 
         removeCmap();
         location.reload();
