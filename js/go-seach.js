@@ -1,6 +1,6 @@
 
 function getserchdata(kw) {
-
+    $("#lbf-sea-vcard").children().remove();
     $.ajax({
         type: "post",
         url: SERVERCOM + "/api/v1/videos",

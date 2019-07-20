@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
     var lockst = 0;
+    var vidtitle;
     var vidpic;
     CMAP = getCmap();
     const dp = new DPlayer({
@@ -23,6 +24,7 @@ $(document).ready(function () {
             //  alert(response[0].videoUrl);
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
+            vidtitle=response[0].videoTitle;
             vidpic=SERVERCOM + "/" + response[0].videoPic;
             dp.switchVideo({
                 url: SERVERCOM + "/" + response[0].videoUrl,
@@ -70,14 +72,14 @@ $(document).ready(function () {
         // console.log(dp.video.currentTime);
 
         var d = new Date();
-        var hiske = $("#y_summary-info").text();
+        
         var hisva = Array(
             GetQueryString("vid"),
             vidpic,
             dp.video.currentTime,
             d.toLocaleDateString() + " " + d.toLocaleTimeString()
         );
-        HISTORY_VIEW.set(hiske, hisva);
+        HISTORY_VIEW.set(vidtitle, hisva);
         saveHISTORY_VIEW();
     });
     dp.on('danmaku_send', function () {
