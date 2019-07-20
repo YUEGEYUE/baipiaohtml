@@ -39,12 +39,12 @@ $(document).ready(function () {
         HISTORY_VIEW = getHISTORY_VIEW();
         if (HISTORY_VIEW != null) {
 
-            HISTORY_VIEW.forEach(function (k, v) {
-                if (v[0] == GetQueryString("vid")) {
-                    dp.seek(v[1]);
+            HISTORY_VIEW.forEach(function (value, key,map) {
+                if (value[0] == GetQueryString("vid")) {
+                    dp.seek(value[1]);
                     break;
                 }
-            }, HISTORY_VIEW);
+            });
         } else {
             HISTORY_VIEW = new Map();
         }
