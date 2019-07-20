@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     sethis();
     getuserup();
+    getnotification2id("lbf_noti");
     $("#userPic").change(function () {
         // $("#lbf-ed-pic").attr("src",$("#userPic")[0].files[0]);
         var files = this.files;

@@ -11,10 +11,9 @@ function getnotification2id(domid) {
                     $.cookie('notification',data[0].notificationId,{ expires: 7, path: '/' })
                 }
                 if(domid!=""){
-                    var len;
-                    data.length >= 5 ? len = 5 : len = data.length;
+                    
                     $("#"+domid).append("<ul class='list-group'>");
-                    for (var i = 0; i < len; i++) {
+                    for (var i = 0; i < data.length; i++) {
                         $("#"+domid).append("<li>"+data[i].notification+"</li>");
                     }
                     $("#"+domid).append("</ul>");
