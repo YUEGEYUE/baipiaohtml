@@ -69,7 +69,7 @@ $(document).ready(function () {
         var c=
         "<div class='card bg-light text-dark'>"+
             "<div class='card-body'>"+
-                "<div style='float:left; height:100px;' class='col-4'>"+
+                "<div style='float:left; height:100px;' class='col-2'>"+
                     "<img style=' max-height:100%;margin:auto;' src='"+v[1]+"'/>"+
                 "</div>"+
                 "<h3 class='col-4' style='float:left;'>"+k+"</h3>"+
