@@ -14,7 +14,7 @@ function getnotification2id(domid) {
                     
                     $("#"+domid).append("<ul class='list-group'>");
                     for (var i = 0; i < data.length; i++) {
-                        $("#"+domid).append("<li>"+data[i].notification+"</li>");
+                        $("#"+domid).append("<li class='list-group-item'>"+data[i].notification+"</li>");
                     }
                     $("#"+domid).append("</ul>");
                 }
