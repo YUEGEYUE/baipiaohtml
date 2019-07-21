@@ -25,7 +25,10 @@ $(document).ready(function () {
             $.post(SERVERCOM2 + "/audit_video_api/user_id_to_info.php",
                 { userId: response[0].userId },
                 function (data, textStatus, jqXHR) {
-                    $("#up_pic").attr("src", SERVERCOM + "/" + data[0].userPic);
+                    if(data[0].userPic!=null)
+                        $("#up_pic").attr("src", SERVERCOM + "/" + data[0].userPic);
+                    else
+                    $("#up_pic").attr("src", './../img/mrt.jpg');
                     $("#y_u-name").text(data[0].userName);
                 },
 
