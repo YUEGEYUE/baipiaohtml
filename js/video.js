@@ -22,10 +22,18 @@ $(document).ready(function () {
         dataType: "json",
         success: function (response) {
             //  alert(response[0].videoUrl);
+            $.post(SERVERCOM2 + "/audit_video_api/user_id_to_info.php",
+                { userId: response[0].userId },
+                function (data, textStatus, jqXHR) {
+                    $("#up_pic").attr("src", SERVERCOM + "/" + data[0].userPic);
+                    $("#y_u-name").text(data[0].userName);
+                },
+
+            );
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
-            vidtitle=response[0].videoTitle;
-            vidpic=SERVERCOM + "/" + response[0].videoPic;
+            vidtitle = response[0].videoTitle;
+            vidpic = SERVERCOM + "/" + response[0].videoPic;
             dp.switchVideo({
                 url: SERVERCOM + "/" + response[0].videoUrl,
                 pic: SERVERCOM + "/" + response[0].videoPic
@@ -43,10 +51,10 @@ $(document).ready(function () {
         HISTORY_VIEW = getHISTORY_VIEW();
         if (HISTORY_VIEW != null) {
 
-            HISTORY_VIEW.forEach(function (value, key,map) {
+            HISTORY_VIEW.forEach(function (value, key, map) {
                 if (value[0] == GetQueryString("vid")) {
                     dp.seek(value[2]);
-                    
+
                 }
             });
         } else {
@@ -72,7 +80,7 @@ $(document).ready(function () {
         // console.log(dp.video.currentTime);
 
         var d = new Date();
-        
+
         var hisva = Array(
             GetQueryString("vid"),
             vidpic,
@@ -123,7 +131,9 @@ $(document).ready(function () {
                         comui(
                             {
                                 comment: $("#lbf_comment").val(),
-                                userId: CMAP.get('userId')
+                                userId: CMAP.get('userId'),
+                                userPic: CMAP.get('userPic'),
+                                userName: CMAP.get('userName')
                             }
                         ));
 
@@ -154,8 +164,22 @@ function getcom() {
         },
         success: function (response) {
 
-            for (var i = 0; i < response.data.length; i++)
-                $("#lbf_comshomw").append(comui(response.data[0]));
+            for (var i = 0; i < response.data.length; i++) {
+                $.post(SERVERCOM2 + "/audit_video_api/user_id_to_info.php",
+                    {userId:response.data.userId},
+                    function (udata, textStatus, jqXHR) {
+                        $("#lbf_comshomw").append(
+                            comui({
+                                userName:udata[0].userName,
+                                comment:response.data.comment,
+                                userPic:udata.userPic,
+                            }));
+                    },
+                    
+                );
+                
+            }
+
 
 
         }
@@ -168,7 +192,10 @@ function comui(da) {
         "<div class='card-body'>" +
         "<blockquote class='blockquote'>" +
         "<p>" + da.comment + "</p>" +
-        "<footer class='blockquote-footer'>" + da.userId + "</footer>" +
+        "<footer class='blockquote-footer'>" +
+        "<img src='" + SERVERCOM2 + "/" + da.userPic + "' class='rounded' alt='Cinque Terre' width='48' height='48'> " +
+        da.userName +
+        "</footer>" +
         "</blockquote>" +
         "</div>" +
         "</div>";
