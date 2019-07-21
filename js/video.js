@@ -165,19 +165,12 @@ function getcom() {
         success: function (response) {
 
             for (var i = 0; i < response.data.length; i++) {
-                $.post(SERVERCOM2 + "/audit_video_api/user_id_to_info.php",
-                    { userId: response.data[i].userId },
-                    function (udata, textStatus, jqXHR) {
-                        $("#lbf_comshomw").append(
-                            comui({
-                                userName: udata[0].userName,
-                                comment: response.data[i].comment,
-                                userPic: udata[0].userPic,
-                            }));
-                    },
-
-                );
-
+                $("#lbf_comshomw").append(
+                    comui({
+                        userName: response.data[i].userName,
+                        comment: response.data[i].comment,
+                        userPic: SERVERCOM2 + "/" +response.data[i].userPic,
+                    }));
             }
 
 
@@ -193,7 +186,7 @@ function comui(da) {
         "<blockquote class='blockquote'>" +
         "<p>" + da.comment + "</p>" +
         "<footer class='blockquote-footer'>" +
-        "<img src='" + SERVERCOM2 + "/" + da.userPic + "' class='rounded' alt='Cinque Terre' width='48' height='48'> " +
+        "<img src='" +  da.userPic + "' class='rounded' alt='Cinque Terre' width='48' height='48'> " +
         da.userName +
         "</footer>" +
         "</blockquote>" +
