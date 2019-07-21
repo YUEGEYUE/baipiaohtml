@@ -166,18 +166,18 @@ function getcom() {
 
             for (var i = 0; i < response.data.length; i++) {
                 $.post(SERVERCOM2 + "/audit_video_api/user_id_to_info.php",
-                    {userId:response.data.userId},
+                    { userId: response.data.userId },
                     function (udata, textStatus, jqXHR) {
                         $("#lbf_comshomw").append(
                             comui({
-                                userName:udata[0].userName,
-                                comment:response.data.comment,
-                                userPic:udata.userPic,
+                                userName: udata[0].userName,
+                                comment: response.data.comment,
+                                userPic: udata[0].userPic,
                             }));
                     },
-                    
+
                 );
-                
+
             }
 
 
