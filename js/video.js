@@ -186,7 +186,7 @@ function comui(da) {
         "<blockquote class='blockquote'>" +
         "<p>" + da.comment + "</p>" +
         "<footer class='blockquote-footer'>" +
-        "<img src='" +  da.userPic + "' class='rounded' alt='Cinque Terre' width='48' height='48'> " +
+        "<img src='" +  da.userPic + "' class='rounded' alt='Cinque Terre' width='48px' height='48px'> " +
         da.userName +
         "</footer>" +
         "</blockquote>" +
