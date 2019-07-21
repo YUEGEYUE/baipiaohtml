@@ -169,7 +169,7 @@ function getcom() {
                     comui({
                         userName: response.data[i].userName,
                         comment: response.data[i].comment,
-                        userPic: SERVERCOM2 + "/" +response.data[i].userPic,
+                        userPic: SERVERCOM + "/" +response.data[i].userPic,
                     }));
             }
 
