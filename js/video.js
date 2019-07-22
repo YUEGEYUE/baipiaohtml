@@ -36,8 +36,12 @@ $(document).ready(function () {
                 },
 
             );
-            $("#lbf_down_but").attr('href', SERVERCOM2+"/audit_video_api/download.php?filename="+response[0].videoUrl);
+            if(CMAP!=null){
+                $("#lbf_down_but").attr('href', SERVERCOM2+"/audit_video_api/download.php?filename="+
+                response[0].videoUrl+"&filetitle"+response[0].videoTitle);
             $("#lbf_down_but").attr('download', response[0].videoTitle);
+            }
+            
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
             vidtitle = response[0].videoTitle;
