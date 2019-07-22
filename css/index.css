@@ -48,6 +48,7 @@ body {
 }
 
 .lgl_header_right_icon img {
+    margin-top: 4px;
     width: 30px;
     height: 30px;
     border-radius: 32px;

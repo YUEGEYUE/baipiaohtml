@@ -1,84 +1,88 @@
-function tvshow(){
+function tvshow() {
     $.ajax({
         type: "post",
-        url: SERVERCOM+"/api/v1/videos",
-        data: {videoType:'tv'},
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoType: 'tv' },
         dataType: "json",
-        success: function (response) {
-            var le=0;
-            response.data.length>12 ? le=12:le=response.data.length;
-            for(var i=0;i<le;i++){
+        success: function(response) {
+            var le = 0;
+            response.data.length > 12 ? le = 12 : le = response.data.length;
+            for (var i = 0; i < le; i++) {
                 $("#tv-vcard").append(setc(response.data[i]));
             }
         }
     });
 }
-function filmshow(){
+
+function filmshow() {
     $.ajax({
         type: "post",
-        url: SERVERCOM+"/api/v1/videos",
-        data: {videoType:'film'},
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoType: 'film' },
         dataType: "json",
-        success: function (response) {
-            var le=0;
-            response.data.length>12 ? le=12:le=response.data.length;
-            for(var i=0;i<le;i++){
+        success: function(response) {
+            var le = 0;
+            response.data.length > 12 ? le = 12 : le = response.data.length;
+            for (var i = 0; i < le; i++) {
                 $("#film-vcard").append(setc(response.data[i]));
             }
         }
     });
 }
-function animeshow(){
+
+function animeshow() {
     $.ajax({
         type: "post",
-        url: SERVERCOM+"/api/v1/videos",
-        data: {videoType:'anime'},
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoType: 'anime' },
         dataType: "json",
-        success: function (response) {
-            var le=0;
-            response.data.length>12 ? le=12:le=response.data.length;
-            for(var i=0;i<le;i++){
+        success: function(response) {
+            var le = 0;
+            response.data.length > 12 ? le = 12 : le = response.data.length;
+            for (var i = 0; i < le; i++) {
                 $("#anime-vcard").append(setc(response.data[i]));
             }
         }
     });
 }
-function mvshow(){
+
+function mvshow() {
     $.ajax({
         type: "post",
-        url: SERVERCOM+"/api/v1/videos",
-        data: {videoType:'mv'},
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoType: 'mv' },
         dataType: "json",
-        success: function (response) {
-            var le=0;
-            response.data.length>12 ? le=12:le=response.data.length;
-            for(var i=0;i<le;i++){
+        success: function(response) {
+            var le = 0;
+            response.data.length > 12 ? le = 12 : le = response.data.length;
+            for (var i = 0; i < le; i++) {
                 $("#mv-vcard").append(setc(response.data[i]));
             }
         }
     });
 }
-function adshow(){
+
+function adshow() {
     $.ajax({
         type: "post",
-        url: SERVERCOM+"/api/v1/videos",
-        data: {videoType:'ad'},
+        url: SERVERCOM + "/api/v1/videos",
+        data: { videoType: 'ad' },
         dataType: "json",
-        success: function (response) {
-            var le=0;
-            response.data.length>12 ? le=12:le=response.data.length;
-            for(var i=0;i<le;i++){
+        success: function(response) {
+            var le = 0;
+            response.data.length > 12 ? le = 12 : le = response.data.length;
+            for (var i = 0; i < le; i++) {
                 $("#ad-vcard").append(setc(response.data[i]));
             }
         }
     });
 }
-$(document).ready(function () {
+$(document).ready(function() {
     CMAP = getCmap();
     if (CMAP != null) {
         $("#message").css("display", "inline");
         $("#lbf-userpic").attr("href", "./loge/personal.html");
-        if (CMAP.get("userPic") == SERVERCOM+'/' ||
+        if (CMAP.get("userPic") == SERVERCOM + '/' ||
             CMAP.get("userPic") == null) {
             // alert('dd');
             $("#lbf-userpic").find("img").attr("src", "./img/mrt.jpg");
@@ -86,7 +90,7 @@ $(document).ready(function () {
             $("#lbf-userpic").find("img").attr("src", CMAP.get("userPic"));
         }
     } else {
-        
+
         $("#lbf-userpic").attr("href", "./loge/login.html");
         $("#lbf-userpic").find("img").attr("src", "./img/mrt.jpg");
     }
@@ -97,37 +101,36 @@ $(document).ready(function () {
     adshow();
 
     getnotification2id("");
-    
 
-    $('#lbf-exit-but').click(function () { 
+
+    $('#lbf-exit-but').click(function() {
         removeCmap();
         removeHISTORY_VIEW();
         location.reload();
     });
 
-    $("#tt1").mouseenter(function () {
+    $("#tt1").mouseenter(function() {
         $("#tt1").click();
     });
-    $("#lbf-secbut").click(function () { 
-        location.href='./loge/go-seach.html?keyword='+$("#search").val();
-        
+    $("#lbf-secbut").click(function() {
+        location.href = './loge/go-seach.html?keyword=' + $("#search").val();
+
     });
 
-    $("#search").keyup(function (e) { 
-        if(e.keyCode ==13||e.keyCode==100){
-            if($("#search").val()!=""){
-                location.href='./loge/go-seach.html?keyword='+$("#search").val();
-            }else
+    $("#search").keyup(function(e) {
+        if (e.keyCode == 13 || e.keyCode == 100) {
+            if ($("#search").val() != "") {
+                location.href = './loge/go-seach.html?keyword=' + $("#search").val();
+            } else
                 return false;
-        }else
+        } else
             return false;
     });
 
-    $("#search").keydown(function (e) { 
-        if(e.keyCode==13||e.keyCode==100){
+    $("#search").keydown(function(e) {
+        if (e.keyCode == 13 || e.keyCode == 100) {
             return false;
         }
-            
+
     });
 });
-
