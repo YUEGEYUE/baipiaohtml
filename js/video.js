@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     $("#lbf_down_but").click(function (e) { 
-        download($(this).attr('vidurl'),$(this).attr('vidti'),'video/mp4');
+        download($(this).attr('vidurl'));
         
     });
     function hisseek() {
