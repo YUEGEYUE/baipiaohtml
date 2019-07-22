@@ -48,6 +48,13 @@ $(document).ready(function () {
         else
             return false;
     });
+
+    $("#yfm_seainput").keydown(function (e) { 
+        if(e.keyCode==13||e.keyCode==100){
+            return false;
+        }
+            
+    });
 });
 
 // yfm
