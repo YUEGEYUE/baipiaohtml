@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../DPlayer-dist/DPlayer.min.css">
     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"  href="../css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/video.css">
 
@@ -23,24 +23,27 @@
         <div class="y_head-contain">
             <div class="y_menu">
                 <div class="d-flex flex-row">
-                <div class="lgl_header_logo">
-                    <a href="../index.html"><img src="../img/LOGO.jpg"></a>
-                    <!--logo图-->
-                </div>
-                <nav class="y_leader" style="right: 0px">
-                    <ul>
-                        <li>
-                            <a href="../loge/go-seach.html">查找</a>
-                        </li>
-                        <li>
-                            <a href="../loge/personal.html">我的</a>
-                        </li>
-                        <!-- <li>
+                    <div class="lgl_header_logo">
+                        <a href="../index.html"><img src="../img/LOGO.jpg"></a>
+                        <!--logo图-->
+                    </div>
+                    <nav class="y_leader" style="right: 0px">
+                        <ul>
+                            <li>
+                                <a href="../index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="../loge/go-seach.html">查找</a>
+                            </li>
+                            <li>
+                                <a href="../loge/personal.html">我的</a>
+                            </li>
+                            <!-- <li>
                             <a href="#">Link 3</a>
                         </li> -->
-                    </ul>
-                </nav>
-                <!-- <div class="input-group col-md-3 input-group-sm" style="margin-top:9px;">
+                        </ul>
+                    </nav>
+                    <!-- <div class="input-group col-md-3 input-group-sm" style="margin-top:9px;">
                     <input type="text" class="form-control" placeholder="..." />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-sm">搜索</button>
@@ -50,95 +53,95 @@
             </div>
         </div>
         <div class="y_body">
-                <div class="y_body-view">
-                    <div class="y_body-l">
-                        <div class="y_view-report">
-                            <div class="y_video-title">
-                                <span class="y_title" id="y_title">title</span>
-                            </div>
-                            <!-- <div class="y_video-date">
+            <div class="y_body-view">
+                <div class="y_body-l">
+                    <div class="y_view-report">
+                        <div class="y_video-title">
+                            <span class="y_title" id="y_title">title</span>
+                        </div>
+                        <!-- <div class="y_video-date">
                                 <span class="y_date">date</span>
                             </div> -->
-                        </div>
-                        <div class="y_video">
-                            <div id="dplayer" style="height: 100%"></div>
-                        </div>
-                        <div class="y_video-summary">
-                            <div class="y_summary-info" id="y_summary-info">
-                                summary
-                            </div>
-                        </div>
-                        <div id="y_comment" style="margin-top:30px;">
-                            <div class="y_comment">
-                                <div class="y_comment-send">
-                                    <div class="form-group" style="width:800px;float: left;line-height: 0px;">
-                                        <textarea class="form-control" rows="3" id="lbf_comment"></textarea>
-                                    </div>
-                                    <input type="button" class="btn btn-info" value="发送评论" id="lbf_sendcombut">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" id="lbf_comshomw"> 
-
-                        </div>
-    
                     </div>
-                    <div class="y_body-r">
-                        <div class="d-flex flex-row  mb-3" style="height:80px;">
-                            <div class="y_u-face"style="width:48px;">
-                                <img class="rounded-circle" id="up_pic" style="width:48px;height:48px;" src="../img/video_up_face.png">
-                            </div>
-                            <div class="y_u-info">
-                                <div class="y_u-name" id="y_u-name" style="color:#a83f3f">biaopiao</div>
-                                <!-- <div class="y_u-desc" style="color:#b4b2b2">ye lai la</div> -->
+                    <div class="y_video">
+                        <div id="dplayer" style="height: 100%"></div>
+                    </div>
+                    <div class="y_video-summary">
+                        <div class="y_summary-info" id="y_summary-info">
+                            summary
+                        </div>
+                    </div>
+                    <div id="y_comment" style="margin-top:30px;">
+                        <div class="y_comment">
+                            <div class="y_comment-send">
+                                <div class="form-group" style="width:800px;float: left;line-height: 0px;">
+                                    <textarea class="form-control" rows="3" id="lbf_comment"></textarea>
+                                </div>
+                                <input type="button" class="btn btn-info" value="发送评论" id="lbf_sendcombut">
                             </div>
                         </div>
-                        <div id="demo" class="carousel slide" data-ride="carousel">
-                            <!-- 指示符 -->
-                            <ul class="carousel-indicators">
-                                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                <li data-target="#demo" data-slide-to="1"></li>
-                                <li data-target="#demo" data-slide-to="2"></li>
-                            </ul>
-        
-                            <!-- 轮播图片 -->
-                            <div class="carousel-inner" style="height:300px">
-                                <div class="carousel-item active">
-                                    <img src="../img/video_1.jpg">
-                                    <div class="carousel-caption">
-      
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../img/video_2.jpg">
-                                    <div class="carousel-caption">
+                    </div>
+                    <div class="container" id="lbf_comshomw">
 
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../img/video_3.jpg">
-                                    <div class="carousel-caption">
+                    </div>
 
-                                    </div>
+                </div>
+                <div class="y_body-r">
+                    <div class="d-flex flex-row  mb-3" style="height:80px;">
+                        <div class="y_u-face" style="width:48px;">
+                            <img class="rounded-circle" id="up_pic" style="width:48px;height:48px;"
+                                src="../img/video_up_face.png">
+                        </div>
+                        <div class="y_u-info">
+                            <div class="y_u-name" id="y_u-name" style="color:#a83f3f">biaopiao</div>
+                            <!-- <div class="y_u-desc" style="color:#b4b2b2">ye lai la</div> -->
+                        </div>
+                    </div>
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <!-- 指示符 -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- 轮播图片 -->
+                        <div class="carousel-inner" style="height:300px">
+                            <div class="carousel-item active">
+                                <img src="../img/video_1.jpg">
+                                <div class="carousel-caption">
+
                                 </div>
                             </div>
-                            <!--carousel-inner-->
-        
-                            <!-- 左右切换按钮 -->
-                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </a>
-                            <a class="carousel-control-next" href="#demo" data-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </a>
-        
+                            <div class="carousel-item">
+                                <img src="../img/video_2.jpg">
+                                <div class="carousel-caption">
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/video_3.jpg">
+                                <div class="carousel-caption">
+
+                                </div>
+                            </div>
                         </div>
+                        <!--carousel-inner-->
+
+                        <!-- 左右切换按钮 -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   
+    </div>
 
 
 
@@ -150,7 +153,8 @@
 
 
 
-    
+
+
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="./../js/jquery.cookie-1.4.1.min.js"></script>
     <script src="../popper-1.15.0-dist/popper.min.js"></script>
