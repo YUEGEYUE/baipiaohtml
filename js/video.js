@@ -38,7 +38,7 @@ $(document).ready(function () {
             );
             if(CMAP!=null){
                 $("#lbf_down_but").attr('href', SERVERCOM2+"/audit_video_api/download.php?filename="+
-                response[0].videoUrl+"&filetitle"+response[0].videoTitle);
+                response[0].videoUrl+"&filetitle="+response[0].videoTitle);
             $("#lbf_down_but").attr('download', response[0].videoTitle);
             }
             
