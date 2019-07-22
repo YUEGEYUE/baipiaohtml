@@ -166,13 +166,18 @@ function getcom() {
             $("#lbf_comshomw").append("<span>没有评论</span>");
         },
         success: function (response) {
-
+            var pic;
             for (var i = 0; i < response.data.length; i++) {
+                if(response.data[i].userPic==SERVERCOM+"/"){
+                    pic='./../img/mrt.jpg'
+                }else{
+                    pic=SERVERCOM + "/" +response.data[i].userPic
+                }
                 $("#lbf_comshomw").append(
                     comui({
                         userName: response.data[i].userName,
                         comment: response.data[i].comment,
-                        userPic: SERVERCOM + "/" +response.data[i].userPic,
+                        userPic: pic,
                     }));
             }
 
