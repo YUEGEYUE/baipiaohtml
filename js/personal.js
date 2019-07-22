@@ -2,7 +2,7 @@ $(document).ready(function () {
     CMAP = getCmap();
     $("#lbf-ed-username").text(CMAP.get('userName'));
     if (CMAP.get('userPic') == null || CMAP.get('userPic') == SERVERCOM+"/") {
-        $("#lbf-ed-pic").attr("src", "./img/mrt.jpg");
+        $("#lbf-ed-pic").attr("src", "./../img/mrt.jpg");
     } else {
         $("#lbf-ed-pic").attr("src", CMAP.get('userPic'));
     }
