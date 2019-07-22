@@ -36,6 +36,25 @@ $(document).ready(function () {
 
 
     });
+
+    $("#yfm_seainput").keyup(function (e) { 
+        if(e.keyCode==13||e.keyCode==100){
+            if ($("#yfm_seainput").val() == "") {
+                alert("请输入搜索词");
+            } else {
+                getserchdata($("#yfm_seainput").val());
+            }
+        }
+        else
+            return false;
+    });
+
+    $("#yfm_seainput").keydown(function (e) { 
+        if(e.keyCode==13||e.keyCode==100){
+            return false;
+        }
+            
+    });
 });
 
 // yfm
