@@ -1,7 +1,7 @@
 $(document).ready(function () {
     CMAP = getCmap();
     $("#lbf-ed-username").text(CMAP.get('userName'));
-    if (CMAP.get('userPic') == null || CMAP.get('userPic') == "http://172.16.56.161:10007/") {
+    if (CMAP.get('userPic') == null || CMAP.get('userPic') == SERVERCOM+"/") {
         $("#lbf-ed-pic").attr("src", "./img/mrt.jpg");
     } else {
         $("#lbf-ed-pic").attr("src", CMAP.get('userPic'));

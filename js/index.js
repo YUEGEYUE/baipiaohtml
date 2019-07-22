@@ -78,7 +78,7 @@ $(document).ready(function () {
     if (CMAP != null) {
         $("#message").css("display", "inline");
         $("#lbf-userpic").attr("href", "./loge/personal.html");
-        if (CMAP.get("userPic") == 'http://localhost/BaiPiao-PHP/' ||
+        if (CMAP.get("userPic") == SERVERCOM+'/' ||
             CMAP.get("userPic") == null) {
             // alert('dd');
             $("#lbf-userpic").find("img").attr("src", "./img/mrt.jpg");
