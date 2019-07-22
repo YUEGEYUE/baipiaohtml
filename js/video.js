@@ -36,8 +36,8 @@ $(document).ready(function () {
                 },
 
             );
-            $("#lbf_down_but").attr('vidurl', SERVERCOM+"/"+response[0].videoUrl);
-            $("#lbf_down_but").attr('vidti', response[0].videoTitle+".mp4");
+            $("#lbf_down_but").attr('href', SERVERCOM2+"/audit_video_api/download.php?filename="+response[0].videoUrl);
+            $("#lbf_down_but").attr('download', response[0].videoTitle+".mp4");
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
             vidtitle = response[0].videoTitle;
@@ -54,11 +54,11 @@ $(document).ready(function () {
         }
     });
 
-    $("#lbf_down_but").click(function (e) { 
-        download($(this).attr('vidurl'));
+    // $("#lbf_down_but").click(function (e) { 
+    //     download($(this).attr('vidurl'));
+
         
-        
-    });
+    // });
     function hisseek() {
         HISTORY_VIEW = getHISTORY_VIEW();
         if (HISTORY_VIEW != null) {
