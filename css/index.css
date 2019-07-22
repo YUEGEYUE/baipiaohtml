@@ -110,18 +110,21 @@ img{
 	margin-bottom: 20px;
 }
 .lgl_content .lgl_partition a{
-	color:#555;
+	color:#d81e06;
 	text-decoration:none;
 }
 .lgl_content .lgl_partition .lgl_partition_head{
 	padding:7px;
 	height:48px;
 	border:0px solid #d81e06;
+	
+	border-radius: 10px;
 }
 .lgl_content .lgl_partition .lgl_partition_head_left{
 	float:left;
 	font-family:"黑体";
 	font-size:25px;
+	margin-left: 70px;
 }
 .lgl_content .lgl_partition .lgl_partition_head_left img{
 	width:32px;
@@ -147,7 +150,7 @@ img{
 }
 .lgl_content .lgl_partition .lgl_partition_head_right button{
 	border:0px solid white;
-	background-color:white;
+	background-color:rgba(0, 0, 0, 0);
 	width:35px;
 	height:35px;
 }

@@ -106,10 +106,11 @@ body{
 .lgl_content .lgl_update_pic{
     position: absolute;
     margin: auto;
-    border: 1px solid red;   
+    border: 0px solid red;   
     left:50%;top:50%;margin-left:-200px;margin-top:-150px; 
 }
 .lgl_content img{
+
     width: 80px;
 	height: 80px;
 	border-radius: 10px;
