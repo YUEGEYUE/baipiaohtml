@@ -57,6 +57,7 @@ $(document).ready(function () {
     $("#lbf_down_but").click(function (e) { 
         download($(this).attr('vidurl'));
         
+        
     });
     function hisseek() {
         HISTORY_VIEW = getHISTORY_VIEW();
