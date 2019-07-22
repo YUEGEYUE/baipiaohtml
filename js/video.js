@@ -37,7 +37,7 @@ $(document).ready(function () {
 
             );
             $("#lbf_down_but").attr('href', SERVERCOM+"/"+response[0].videoUrl);
-            $("#lbf_down_but").attr('download', response[0].videoTitle);
+            $("#lbf_down_but").attr('download', response[0].videoTitle+".mp4");
             $("#y_title").text(response[0].videoTitle);
             $("#y_summary-info").text(response[0].videoIntroduction);
             vidtitle = response[0].videoTitle;
