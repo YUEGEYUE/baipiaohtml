@@ -6,7 +6,7 @@ $(document).ready(function () {
         alert('请先登录');
         location.href="./login.html";
     }
-    $("#vidshow").hide();
+    // $("#vidshow").hide();
 
 
     $("#videoUrl").change(function () {
@@ -31,7 +31,7 @@ $(document).ready(function () {
             alert("请上传png图像");
             return false;
         }
-        $("#vidshow").fadeToggle("slow");
+        // $("#vidshow").fadeToggle("slow");
         $("#upvidPicname").text($(this).val());
         var reader = new FileReader();
         reader.readAsDataURL(file);
