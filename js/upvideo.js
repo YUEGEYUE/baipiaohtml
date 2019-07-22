@@ -2,10 +2,10 @@
 $(document).ready(function () {
     $("#lbf-progress").hide();
     CMAP = getCmap();
-    if(CMAP==null){
-        alert('请先登录');
-        location.href="./login.html";
-    }
+    // if(CMAP==null){
+    //     alert('请先登录');
+    //     location.href="./login.html";
+    // }
     // $("#vidshow").hide();
 
 
