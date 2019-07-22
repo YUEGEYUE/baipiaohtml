@@ -28,9 +28,22 @@ html,body{
     height:500px;
     width:10px;
     margin-top:400px;
-    
     background-color:#f0f;
 }*/
+.yfm_header .logo{
+    height: 48px;
+    float: left;
+}
+.yfm_header .home{
+    float: right;
+    font-size: 36px;
+    margin-right: 20px;
+}
+.yfm_header .home a{
+    text-decoration:none;
+    color: #000;
+}
+
 .yfm_content{
     
 width:100%;
@@ -55,7 +68,7 @@ width:100%;
  .yfm_title{
     
    
-     margin-left:500px;
+     margin:auto;
      font-size:22px;
      width:120px;
      
@@ -68,11 +81,12 @@ width:100%;
      -webkit-transform: rotateY(360deg); /* Chrome, Safari, Opera */
      transform: rotateY(360deg);
  }
+ 
  .input-group{
  
      
      
-     margin-left:500px;
+     margin:auto;
      text-align: center;
      line-height: 64px;
  }
@@ -80,6 +94,8 @@ width:100%;
     
      margin-left:100px;
  }
+
+
  /*.yfm_page{
     text-align: center;
     margin-top:50px;
