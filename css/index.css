@@ -60,6 +60,7 @@ body{
 	margin-top:7px;
 	float:left;
 	margin-left:30px;
+	cursor: pointer;
 	}
 .lgl_header_right_exit a{
 	color: #000; 
