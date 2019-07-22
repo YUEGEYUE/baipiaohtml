@@ -192,7 +192,7 @@ img {
     top: 40%;
     border: 2px solid #d81e06;
     width: 60px;
-    height: 230px;
+    height: 220px;
     right: 10px;
     background-color: #e5e9ef;
 }
@@ -214,6 +214,16 @@ img {
 .lgl_Navigation ul a {
     color: #d81e06;
     text-decoration: none;
+}
+
+.lgl_Navigation ul li:hover {
+    background-color: #d81e06;
+    color: white;
+}
+
+.lgl_Navigation ul li a:hover {
+    background-color: #d81e06;
+    color: white;
 }
 
 .lgl_Navigation img {
