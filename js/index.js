@@ -113,7 +113,7 @@ $(document).ready(function () {
         
     });
 
-    $(document).keyup(function (e) { 
+    $("#search").keyup(function (e) { 
         if(e.keyCode ==13||e.keyCode==100){
             if($("#search").val()!=""){
                 location.href='./loge/go-seach.html?keyword='+$("#search").val();
