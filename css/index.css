@@ -109,6 +109,10 @@ img{
 	margin: auto;
 	margin-bottom: 20px;
 }
+.lgl_content .lgl_partition a{
+	color:#555;
+	text-decoration:none;
+}
 .lgl_content .lgl_partition .lgl_partition_head{
 	padding:7px;
 	height:48px;
