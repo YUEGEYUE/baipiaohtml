@@ -39,6 +39,7 @@ body {
     float: right;
     padding: 0px;
     margin-top: 7px;
+    font-size: 20px;
 }
 
 .lgl_header_right_icon {
@@ -62,7 +63,7 @@ body {
 }
 
 .lgl_header_right_exit {
-    margin-top: 7px;
+    margin-top: 3px;
     float: left;
     margin-left: 30px;
     cursor: pointer;

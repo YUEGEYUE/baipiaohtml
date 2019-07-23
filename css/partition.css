@@ -31,21 +31,22 @@ body{
 		height:48px;
 	}
 .lgl_header_right{
-	width:100px;
+	width:80px;
 	float:right;
 	padding:0px;
-	margin-top:7px;
+	margin-top:3px;
+	font-size: 20px;
 }
-.lgl_header_right_exit{
+.lgl_header_right_home{
 	margin-top:7px;
 	float:left;
 	margin-left:30px;
 	}
-.lgl_header_right_exit a{
+.lgl_header_right_home a{
 	color: #000; 
 	text-decoration: none;
 }
-.lgl_header_right_exit a:hover{
+.lgl_header_right_home a:hover{
 	color: #ccc;
 }
 .lgl_content{

@@ -31,10 +31,10 @@ body{
 		height:48px;
 	}
 .lgl_header_right{
-	width:100px;
+	width:80px;
 	float:right;
-	padding:0px;
-	margin-top:7px;
+	margin-top:3px;
+	font-size: 20px;
 }
 .lgl_header_right_exit{
 	margin-top:7px;

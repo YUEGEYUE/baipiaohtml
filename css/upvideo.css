@@ -3,3 +3,48 @@
 body{
     text-align: center;
 }
+.lgl_bd{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: #fff;
+    min-width: 1500px;
+}
+.lgl_header{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 48px;
+    background-color: #ee1c1b;
+    margin: auto;
+
+}
+.lgl_header_logo{
+    width: 200px;
+    float: left;
+}
+.lgl_header_logo img{
+    height: 48px;
+}
+.lgl_header_right{
+    width: 110px;
+    float: right;
+    padding: 0px;
+    margin-top: 7px;
+    font-size: 20px;
+}
+.lgl_header_right a{
+   height: 48px;
+   width:48px;
+   color: #000;
+}
+.lgl_header_right_icon{
+    float: left;
+}
+.lgl_header_right_home{
+    float: right;
+    margin-right: 30px;
+}
