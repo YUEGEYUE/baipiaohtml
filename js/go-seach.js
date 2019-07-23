@@ -6,11 +6,14 @@ function getserchdata(kw) {
         url: SERVERCOM + "/api/v1/videos",
         data: { videoTitle: kw },
         dataType: "json",
-        success: function (response) {
-            // alert("response.data.length:"+response.data.length);
+        error:function(response){
+            
             if(response.msg=='相关视频不存在'){
                 alert(response.msg);
             }
+        },
+        success: function (response) {
+            
             if (response.data.length > 0) {
                 for (var i = 0; i < response.data.length; i++) {
                     $("#lbf-sea-vcard").append(setc(response.data[i]));
