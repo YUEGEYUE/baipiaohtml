@@ -8,14 +8,17 @@ function getserchdata(kw) {
         dataType: "json",
         success: function (response) {
             // alert("response.data.length:"+response.data.length);
+            if(response.msg=='相关视频不存在'){
+                alert(response.msg);
+            }
             if (response.data.length > 0) {
                 for (var i = 0; i < response.data.length; i++) {
                     $("#lbf-sea-vcard").append(setc(response.data[i]));
                 }
-            } else {
-                da = null;
-                alert("没有找到视频");
-            }
+            } 
+                
+                
+            
 
         }
     });
