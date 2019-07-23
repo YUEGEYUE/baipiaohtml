@@ -89,6 +89,7 @@ $(document).ready(function() {
         } else {
             $("#lbf-userpic").find("img").attr("src", CMAP.get("userPic"));
         }
+        getnotification2id("");
     } else {
 
         $("#lbf-userpic").attr("href", "./loge/login.html");
@@ -100,7 +101,7 @@ $(document).ready(function() {
     mvshow();
     adshow();
 
-    getnotification2id("");
+    
 
 
     $('#lbf-exit-but').click(function() {
