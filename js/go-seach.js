@@ -8,9 +8,9 @@ function getserchdata(kw) {
         dataType: "json",
         error:function(response){
             
-            if(response.msg=='相关视频不存在'){
+            // if(response.msg=='相关视频不存在'){
                 alert(response.msg);
-            }
+            // }
         },
         success: function (response) {
             
