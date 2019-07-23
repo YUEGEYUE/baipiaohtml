@@ -101,16 +101,16 @@ $(document).ready(function () {
     function upcard(da) {
         var ccolor;
         var ts;
-        da.videoStatus == 1 ? ccolor = "bg-success" : ccolor = "bg-warning";
+        da.videoStatus == 1 ? ccolor = "bg-info" : ccolor = "bg-warning";
         da.videoStatus == 1 ? ts = "" : ts = "审核中";
         var c =
             "<div class='card "+ccolor+" text-dark   lbf_upc' vidid='"+da.videoId+"'  vidsts='"+da.videoStatus+"'>" +
-                "<div class='card-body'>" +
-                    "<div style='float:left; height:100px;' class='col-2'>" +
+                "<div class='card-body' style='padding:0px;'>" +
+                    "<div style='float:left; height:50px;' class='col-2'>" +
                         "<img style=' max-height:100%;margin:auto;' src='" + SERVERCOM + "/" + da.videoPic + "'/>" +
                     "</div>" +
-                    "<h1 class='col-6' style='float:left;'>" + da.videoTitle + "</h1>" +
-                    "<h5 class='col-4' style='float:left;'>"+ts+"</h5>" +
+                    "<h3 class='col-6' style='float:left;'>" + da.videoTitle + "</h3>" +
+                    "<h4 class='col-4' style='float:left;'>"+ts+"</h4>" +
                 "</div>" +
             "</div>";
         return c;
