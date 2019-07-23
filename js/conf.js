@@ -2,6 +2,9 @@ var SERVERCOM = 'http://172.16.56.161:10007';
 var SERVERCOM2 = 'http://172.16.56.161:10009';
 var DANMUKEURL = 'http://172.16.56.161:1207/';
 var THISROOT='http://172.16.56.161:10008';
+/*
+用户信息：key(userid,username,userpic)
+*/ 
 var CMAP = new Map();
 
 /**
