@@ -7,9 +7,10 @@ function getserchdata(kw) {
         data: { videoTitle: kw },
         dataType: "json",
         error:function(response){
+            console.log(response.responseText.msg);
             
             // if(response.msg=='相关视频不存在'){
-                alert(response.msg);
+                alert('相关视频不存在');
             // }
         },
         success: function (response) {
