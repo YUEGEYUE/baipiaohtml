@@ -86,7 +86,7 @@ $(document).ready(function () {
 				},
 				error:function(e){
                     console.log(e.responseText);
-                    
+                    alert(e.responseText);
                 },
                 
 				success: function (res) {
